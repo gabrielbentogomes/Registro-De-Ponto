@@ -38,23 +38,47 @@ namespace Registro_de_Ponto
 
         private void loginEntrar_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            con.Open();
-            string login = "SELECT * FROM user_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
-            cmd = new SqlCommand(login, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-         
-            if(dr.Read()==true)
+            if (radioFunc.Checked)
             {
-                new Inicio().Show();
-                this.Hide();
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                con.Open();
+                string login = "SELECT * FROM user_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                cmd = new SqlCommand(login, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read()==true)
+                {
+                    new Inicio().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            else if(radioSuper.Checked)
             {
-                MessageBox.Show("Senha ou usuário incorretos","Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                con.Open();
+                string login = "SELECT * FROM super_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                cmd = new SqlCommand(login, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+
+                if (dr.Read()==true)
+                {
+                    new Inicio().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

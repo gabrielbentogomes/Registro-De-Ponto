@@ -34,8 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.loginEntrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioSuper = new System.Windows.Forms.RadioButton();
+            this.radioFunc = new System.Windows.Forms.RadioButton();
             this.senha = new System.Windows.Forms.TextBox();
             this.usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -113,37 +113,37 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioSuper);
+            this.groupBox1.Controls.Add(this.radioFunc);
             this.groupBox1.Location = new System.Drawing.Point(33, 83);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(234, 49);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // radioSuper
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(132, 20);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Supervisor";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioSuper.AutoSize = true;
+            this.radioSuper.ForeColor = System.Drawing.Color.White;
+            this.radioSuper.Location = new System.Drawing.Point(132, 20);
+            this.radioSuper.Name = "radioSuper";
+            this.radioSuper.Size = new System.Drawing.Size(75, 17);
+            this.radioSuper.TabIndex = 1;
+            this.radioSuper.TabStop = true;
+            this.radioSuper.Text = "Supervisor";
+            this.radioSuper.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioFunc
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(21, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Funcionário";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioFunc.AutoSize = true;
+            this.radioFunc.ForeColor = System.Drawing.Color.White;
+            this.radioFunc.Location = new System.Drawing.Point(21, 20);
+            this.radioFunc.Name = "radioFunc";
+            this.radioFunc.Size = new System.Drawing.Size(80, 17);
+            this.radioFunc.TabIndex = 0;
+            this.radioFunc.TabStop = true;
+            this.radioFunc.Text = "Funcionário";
+            this.radioFunc.UseVisualStyleBackColor = true;
             // 
             // senha
             // 
@@ -218,9 +218,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioSuper;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioFunc;
         private System.Windows.Forms.TextBox senha;
         private System.Windows.Forms.TextBox usuario;
         private System.Windows.Forms.Label label2;
