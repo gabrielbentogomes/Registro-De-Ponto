@@ -40,6 +40,7 @@ namespace Registro_de_Ponto
         {
             if (radioFunc.Checked)
             {
+
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
@@ -60,6 +61,7 @@ namespace Registro_de_Ponto
             }
             else if(radioSuper.Checked)
             {
+
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
@@ -80,6 +82,18 @@ namespace Registro_de_Ponto
                     MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void radioFunc_CheckedChanged(object sender, EventArgs e)
+        {
+            usuario.Text = "";
+            senha.Text = "";
+        }
+
+        private void radioSuper_CheckedChanged(object sender, EventArgs e)
+        {
+            usuario.Text = "";
+            senha.Text = "";
         }
     }
 }
