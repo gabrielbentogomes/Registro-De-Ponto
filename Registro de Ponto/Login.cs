@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,16 @@ namespace Registro_de_Ponto
 
         private void loginEntrar_Click(object sender, EventArgs e)
         {
-            if(usuario.Text == "lilianste" && senha.Text == "12345678")
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            con.Open();
+            string login = "SELECT * FROM user_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+            cmd = new SqlCommand(login, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+         
+            if(dr.Read()==true)
             {
                 new Inicio().Show();
                 this.Hide();
