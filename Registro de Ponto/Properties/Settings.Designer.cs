@@ -33,5 +33,16 @@ namespace Registro_de_Ponto.Properties {
                 return ((string)(this["Registro_PontoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;Use" +
+            "r ID=gabrielbento;Password=Blue123@@")]
+        public string Registro_PontoConnectionString1 {
+            get {
+                return ((string)(this["Registro_PontoConnectionString1"]));
+            }
+        }
     }
 }

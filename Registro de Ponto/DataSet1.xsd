@@ -2,14 +2,15 @@
 <xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Registro_PontoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Registro_PontoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Registro_de_Ponto.Properties.Settings.GlobalReference.Default.Registro_PontoConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Registro_PontoConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Registro_PontoConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Registro_de_Ponto.Properties.Settings.GlobalReference.Default.Registro_PontoConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="super_tbTableAdapter" GeneratorDataComponentClassName="super_tbTableAdapter" Name="super_tb" UserDataComponentName="super_tbTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Registro_PontoConnectionString (Settings)" DbObjectName="Registro_Ponto.dbo.super_tb" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Registro_PontoConnectionString1 (Settings)" DbObjectName="Registro_Ponto.dbo.super_tb" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[super_tb] WHERE (([id_super] = @Original_id_super) AND ([usuario] = @Original_usuario) AND ([senha] = @Original_senha))</CommandText>
@@ -61,7 +62,7 @@ SELECT id_super, usuario, senha FROM super_tb WHERE (id_super = @id_super)</Comm
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_tbTableAdapter" GeneratorDataComponentClassName="user_tbTableAdapter" Name="user_tb" UserDataComponentName="user_tbTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Registro_PontoConnectionString (Settings)" DbObjectName="Registro_Ponto.dbo.user_tb" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Registro_PontoConnectionString1 (Settings)" DbObjectName="Registro_Ponto.dbo.user_tb" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[user_tb] WHERE (([id_user] = @Original_id_user) AND ([usuario] = @Original_usuario) AND ([senha] = @Original_senha))</CommandText>
@@ -116,7 +117,7 @@ SELECT id_user, usuario, senha FROM user_tb WHERE (id_user = @id_user)</CommandT
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="super_tb" msprop:Generator_RowEvHandlerName="super_tbRowChangeEventHandler" msprop:Generator_RowDeletedName="super_tbRowDeleted" msprop:Generator_RowDeletingName="super_tbRowDeleting" msprop:Generator_RowEvArgName="super_tbRowChangeEvent" msprop:Generator_TablePropName="super_tb" msprop:Generator_RowChangedName="super_tbRowChanged" msprop:Generator_RowChangingName="super_tbRowChanging" msprop:Generator_TableClassName="super_tbDataTable" msprop:Generator_RowClassName="super_tbRow" msprop:Generator_TableVarName="tablesuper_tb" msprop:Generator_UserTableName="super_tb">

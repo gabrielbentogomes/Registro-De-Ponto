@@ -1222,7 +1222,7 @@ namespace Registro_de_Ponto.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Registro_de_Ponto.Properties.Settings.Default.Registro_PontoConnectionString;
+            this._connection.ConnectionString = global::Registro_de_Ponto.Properties.Settings.Default.Registro_PontoConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1570,7 +1570,7 @@ namespace Registro_de_Ponto.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Registro_de_Ponto.Properties.Settings.Default.Registro_PontoConnectionString;
+            this._connection.ConnectionString = global::Registro_de_Ponto.Properties.Settings.Default.Registro_PontoConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

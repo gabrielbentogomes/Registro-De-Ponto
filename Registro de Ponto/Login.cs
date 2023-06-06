@@ -42,7 +42,7 @@ namespace Registro_de_Ponto
             {
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
+                con.ConnectionString = "Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
@@ -63,7 +63,7 @@ namespace Registro_de_Ponto
             {
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=GABRIEL-PC\\SQLEXPRESS;Initial Catalog=Registro_Ponto;Integrated Security=True";
+                con.ConnectionString = "Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
