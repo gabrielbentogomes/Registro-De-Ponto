@@ -95,5 +95,6 @@ namespace Registro_de_Ponto
             usuario.Text = "";
             senha.Text = "";
         }
+
     }
 }
