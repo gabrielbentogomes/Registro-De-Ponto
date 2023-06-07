@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilDoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.btnControleJornada = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRelatorio = new System.Windows.Forms.Button();
@@ -60,8 +60,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem,
-            this.perfilDoUsuárioToolStripMenuItem,
+            this.btnSair,
+            this.btnPerfil,
             this.btnControleJornada});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -70,19 +70,21 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // sairToolStripMenuItem
+            // btnSair
             // 
-            this.sairToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(42, 21);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(42, 21);
+            this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // perfilDoUsuárioToolStripMenuItem
+            // btnPerfil
             // 
-            this.perfilDoUsuárioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.perfilDoUsuárioToolStripMenuItem.Name = "perfilDoUsuárioToolStripMenuItem";
-            this.perfilDoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
-            this.perfilDoUsuárioToolStripMenuItem.Text = "Perfil do usuário";
+            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(119, 21);
+            this.btnPerfil.Text = "Perfil do usuário";
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnControleJornada
             // 
@@ -316,8 +318,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perfilDoUsuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnSair;
+        private System.Windows.Forms.ToolStripMenuItem btnPerfil;
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRelatorio;

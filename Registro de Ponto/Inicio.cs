@@ -41,5 +41,17 @@ namespace Registro_de_Ponto
             new Banco().Show(); 
             this.Hide();
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            new Perfil().Show();
+            this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }

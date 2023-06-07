@@ -16,5 +16,17 @@ namespace Registro_de_Ponto
         {
             InitializeComponent();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
+
+        private void btnControleJornada_Click(object sender, EventArgs e)
+        {
+            new Inicio().Show();
+            this.Hide();
+        }
     }
 }
