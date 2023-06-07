@@ -44,5 +44,28 @@ namespace Registro_de_Ponto
             diaSemanaH.Text = diaSemana;
         }
 
+        private void btnRegistrarPonto_Click(object sender, EventArgs e)
+        {
+            new Inicio().Show();
+            this.Hide();
+        }
+
+        private void btnControleJornada_Click(object sender, EventArgs e)
+        {
+            new Inicio().Show();
+            this.Hide();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            new Relatorio().Show(); 
+            this.Hide();
+        }
+
+        private void btnBanco_Click(object sender, EventArgs e)
+        {
+            new Banco().Show();
+            this.Hide();
+        }
     }
 }

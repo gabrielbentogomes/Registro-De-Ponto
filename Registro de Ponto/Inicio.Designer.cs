@@ -33,8 +33,8 @@
             this.perfilDoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnControleJornada = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnBanco = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.btnRegistrarPonto = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -94,8 +94,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnRelatorio);
+            this.panel1.Controls.Add(this.btnBanco);
             this.panel1.Controls.Add(this.btnHistorico);
             this.panel1.Controls.Add(this.btnRegistrarPonto);
             this.panel1.Location = new System.Drawing.Point(23, 126);
@@ -103,27 +103,28 @@
             this.panel1.Size = new System.Drawing.Size(228, 198);
             this.panel1.TabIndex = 2;
             // 
-            // button4
+            // btnRelatorio
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(32, 96);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 34);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Relatório espelho de ponto";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(32, 96);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(165, 34);
+            this.btnRelatorio.TabIndex = 6;
+            this.btnRelatorio.Text = "Relatório espelho de ponto";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnBanco
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(32, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 34);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Banco de horas";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnBanco.ForeColor = System.Drawing.Color.White;
+            this.btnBanco.Location = new System.Drawing.Point(32, 136);
+            this.btnBanco.Name = "btnBanco";
+            this.btnBanco.Size = new System.Drawing.Size(165, 34);
+            this.btnBanco.TabIndex = 5;
+            this.btnBanco.Text = "Banco de horas";
+            this.btnBanco.UseVisualStyleBackColor = false;
+            this.btnBanco.Click += new System.EventHandler(this.btnBanco_Click);
             // 
             // btnHistorico
             // 
@@ -319,8 +320,8 @@
         private System.Windows.Forms.ToolStripMenuItem perfilDoUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.Button btnBanco;
         private System.Windows.Forms.Button btnHistorico;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRegistrarPonto;

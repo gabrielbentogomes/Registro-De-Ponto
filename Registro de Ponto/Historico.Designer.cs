@@ -54,10 +54,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnBanco = new System.Windows.Forms.Button();
+            this.btnHistorico = new System.Windows.Forms.Button();
+            this.btnRegistrarPonto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel26.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +79,7 @@
             this.panel1.Controls.Add(this.textBox239);
             this.panel1.Controls.Add(this.textBox240);
             this.panel1.Controls.Add(this.panel26);
-            this.panel1.Location = new System.Drawing.Point(89, 202);
+            this.panel1.Location = new System.Drawing.Point(265, 203);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(616, 84);
             this.panel1.TabIndex = 0;
@@ -206,7 +212,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(898, 25);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -232,6 +238,7 @@
             this.btnControleJornada.Name = "btnControleJornada";
             this.btnControleJornada.Size = new System.Drawing.Size(143, 21);
             this.btnControleJornada.Text = "Controle de Jornada";
+            this.btnControleJornada.Click += new System.EventHandler(this.btnControleJornada_Click);
             // 
             // panel3
             // 
@@ -243,7 +250,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(89, 183);
+            this.panel3.Location = new System.Drawing.Point(265, 184);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(616, 21);
             this.panel3.TabIndex = 17;
@@ -303,11 +310,72 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Irregularidade";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnRelatorio);
+            this.panel2.Controls.Add(this.btnBanco);
+            this.panel2.Controls.Add(this.btnHistorico);
+            this.panel2.Controls.Add(this.btnRegistrarPonto);
+            this.panel2.Location = new System.Drawing.Point(12, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(228, 198);
+            this.panel2.TabIndex = 18;
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(32, 96);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(165, 34);
+            this.btnRelatorio.TabIndex = 6;
+            this.btnRelatorio.Text = "Relatório espelho de ponto";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
+            // btnBanco
+            // 
+            this.btnBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnBanco.ForeColor = System.Drawing.Color.White;
+            this.btnBanco.Location = new System.Drawing.Point(32, 136);
+            this.btnBanco.Name = "btnBanco";
+            this.btnBanco.Size = new System.Drawing.Size(165, 34);
+            this.btnBanco.TabIndex = 5;
+            this.btnBanco.Text = "Banco de horas";
+            this.btnBanco.UseVisualStyleBackColor = false;
+            this.btnBanco.Click += new System.EventHandler(this.btnBanco_Click);
+            // 
+            // btnHistorico
+            // 
+            this.btnHistorico.BackColor = System.Drawing.Color.White;
+            this.btnHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnHistorico.Location = new System.Drawing.Point(32, 56);
+            this.btnHistorico.Name = "btnHistorico";
+            this.btnHistorico.Size = new System.Drawing.Size(165, 34);
+            this.btnHistorico.TabIndex = 4;
+            this.btnHistorico.Text = "Histórico de ponto";
+            this.btnHistorico.UseVisualStyleBackColor = false;
+            // 
+            // btnRegistrarPonto
+            // 
+            this.btnRegistrarPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRegistrarPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarPonto.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarPonto.Location = new System.Drawing.Point(32, 16);
+            this.btnRegistrarPonto.Name = "btnRegistrarPonto";
+            this.btnRegistrarPonto.Size = new System.Drawing.Size(165, 34);
+            this.btnRegistrarPonto.TabIndex = 3;
+            this.btnRegistrarPonto.Text = "Registrar ponto";
+            this.btnRegistrarPonto.UseVisualStyleBackColor = false;
+            this.btnRegistrarPonto.Click += new System.EventHandler(this.btnRegistrarPonto_Click);
+            // 
             // Historico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.label2);
@@ -323,6 +391,7 @@
             this.menuStrip1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +425,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.Button btnBanco;
+        private System.Windows.Forms.Button btnHistorico;
+        private System.Windows.Forms.Button btnRegistrarPonto;
     }
 }
