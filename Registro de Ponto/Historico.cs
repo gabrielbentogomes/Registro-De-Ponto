@@ -16,5 +16,12 @@ namespace Registro_de_Ponto
         {
             InitializeComponent();
         }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            int altura = this.Height * vScrollBar1.Value / 100;
+            this.Height = altura;
+        }
+
     }
 }

@@ -92,50 +92,60 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnHistorico);
             this.panel1.Controls.Add(this.btnRegistrarPonto);
-            this.panel1.Location = new System.Drawing.Point(22, 126);
+            this.panel1.Location = new System.Drawing.Point(23, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 198);
             this.panel1.TabIndex = 2;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(32, 111);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(32, 96);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 23);
+            this.button4.Size = new System.Drawing.Size(165, 34);
             this.button4.TabIndex = 6;
             this.button4.Text = "Relatório espelho de ponto";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(32, 155);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(32, 136);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 23);
+            this.button3.Size = new System.Drawing.Size(165, 34);
             this.button3.TabIndex = 5;
             this.button3.Text = "Banco de horas";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // btnHistorico
             // 
-            this.btnHistorico.Location = new System.Drawing.Point(32, 66);
+            this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnHistorico.ForeColor = System.Drawing.Color.White;
+            this.btnHistorico.Location = new System.Drawing.Point(32, 56);
             this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(165, 23);
+            this.btnHistorico.Size = new System.Drawing.Size(165, 34);
             this.btnHistorico.TabIndex = 4;
             this.btnHistorico.Text = "Histórico de ponto";
-            this.btnHistorico.UseVisualStyleBackColor = true;
+            this.btnHistorico.UseVisualStyleBackColor = false;
             this.btnHistorico.Click += new System.EventHandler(this.btnHistorico_Click);
             // 
             // btnRegistrarPonto
             // 
-            this.btnRegistrarPonto.Location = new System.Drawing.Point(32, 19);
+            this.btnRegistrarPonto.BackColor = System.Drawing.Color.White;
+            this.btnRegistrarPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarPonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRegistrarPonto.Location = new System.Drawing.Point(32, 16);
             this.btnRegistrarPonto.Name = "btnRegistrarPonto";
-            this.btnRegistrarPonto.Size = new System.Drawing.Size(165, 23);
+            this.btnRegistrarPonto.Size = new System.Drawing.Size(165, 34);
             this.btnRegistrarPonto.TabIndex = 3;
             this.btnRegistrarPonto.Text = "Registrar ponto";
-            this.btnRegistrarPonto.UseVisualStyleBackColor = true;
+            this.btnRegistrarPonto.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.dataHora);
             this.panel2.Controls.Add(this.nomeUsuario);
@@ -149,12 +159,15 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(118, 155);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(115, 146);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(165, 23);
+            this.button5.Size = new System.Drawing.Size(165, 40);
             this.button5.TabIndex = 7;
             this.button5.Text = "REGISTRAR";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // dataHora
             // 
@@ -194,7 +207,10 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.panel3.Controls.Add(this.label1);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 28);
@@ -205,7 +221,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(5, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.Size = new System.Drawing.Size(126, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "REGISTRAR PONTO";
             // 
