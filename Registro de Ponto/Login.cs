@@ -86,14 +86,12 @@ namespace Registro_de_Ponto
 
         private void radioFunc_CheckedChanged(object sender, EventArgs e)
         {
-            usuario.Text = "";
-            senha.Text = "";
+
         }
 
         private void radioSuper_CheckedChanged(object sender, EventArgs e)
         {
-            usuario.Text = "";
-            senha.Text = "";
+
         }
 
     }
