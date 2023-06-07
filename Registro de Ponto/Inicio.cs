@@ -15,9 +15,10 @@ namespace Registro_de_Ponto
         public Inicio()
         {
             InitializeComponent();
+            ExibirDataAtual();
         }
 
-        private void dataHora_TextChanged(object sender, EventArgs e)
+        private void ExibirDataAtual()
         {
             dataHora.Text = DateTime.Now.ToString();
             dataHora.ReadOnly = true;
