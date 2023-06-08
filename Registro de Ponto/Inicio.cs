@@ -31,6 +31,7 @@ namespace Registro_de_Ponto
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             new Perfil().Show();
+            this.Close();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

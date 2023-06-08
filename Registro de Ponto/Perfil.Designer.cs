@@ -32,7 +32,14 @@
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.btnControleJornada = new System.Windows.Forms.ToolStripMenuItem();
+            this.nome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fotoPerfil = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.adicionarFoto = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,16 +80,72 @@
             this.btnControleJornada.Text = "Controle de Jornada";
             this.btnControleJornada.Click += new System.EventHandler(this.btnControleJornada_Click);
             // 
+            // nome
+            // 
+            this.nome.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nome.Location = new System.Drawing.Point(204, 83);
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Size = new System.Drawing.Size(328, 20);
+            this.nome.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(160, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Nome:";
+            // 
+            // fotoPerfil
+            // 
+            this.fotoPerfil.Location = new System.Drawing.Point(10, 7);
+            this.fotoPerfil.Name = "fotoPerfil";
+            this.fotoPerfil.Size = new System.Drawing.Size(120, 120);
+            this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPerfil.TabIndex = 10;
+            this.fotoPerfil.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.fotoPerfil);
+            this.panel1.Location = new System.Drawing.Point(635, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(140, 137);
+            this.panel1.TabIndex = 11;
+            // 
+            // adicionarFoto
+            // 
+            this.adicionarFoto.ActiveLinkColor = System.Drawing.Color.Black;
+            this.adicionarFoto.AutoSize = true;
+            this.adicionarFoto.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.adicionarFoto.Location = new System.Drawing.Point(657, 187);
+            this.adicionarFoto.Name = "adicionarFoto";
+            this.adicionarFoto.Size = new System.Drawing.Size(98, 13);
+            this.adicionarFoto.TabIndex = 12;
+            this.adicionarFoto.TabStop = true;
+            this.adicionarFoto.Text = "Alterar foto de perfil";
+            this.adicionarFoto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.adicionarFoto_LinkClicked);
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.adicionarFoto);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.nome);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Perfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +157,10 @@
         private System.Windows.Forms.ToolStripMenuItem btnSair;
         private System.Windows.Forms.ToolStripMenuItem btnPerfil;
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
+        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox fotoPerfil;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel adicionarFoto;
     }
 }

@@ -34,5 +34,11 @@ namespace Registro_de_Ponto
             new Banco().Show();
             this.Hide();
         }
+
+        private void btnSelecionarPeriodo_Click(object sender, EventArgs e)
+        {
+            dataInicio.Text = monthCalendar1.SelectionStart.ToShortDateString();
+            dataFinal.Text = monthCalendar1.SelectionEnd.ToShortDateString();
+        }
     }
 }

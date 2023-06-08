@@ -27,7 +27,6 @@ namespace Registro_de_Ponto
         private void nomeUsuario_TextChanged_1(object sender, EventArgs e)
         {
             /*GABRIEL, AQUI VOCÊ TEM QUE PEGAR DO BD O NOME COMPLETO DO USUÁRIO*/
-            nomeUsuario.ReadOnly = true;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -35,5 +34,6 @@ namespace Registro_de_Ponto
             MessageBox.Show("Horário salvo com sucesso!", "Mensagem", MessageBoxButtons.OK);            
             this.Close();
         }
+
     }
 }

@@ -20,13 +20,26 @@ namespace Registro_de_Ponto
         private void btnSair_Click(object sender, EventArgs e)
         {
             new Login().Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnControleJornada_Click(object sender, EventArgs e)
         {
             new Inicio().Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void adicionarFoto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos de imagem|*.jpg;*.jpeg;*.png;*.gif";
+            openFileDialog.Title = "Selecione a foto de perfil";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string caminhoFoto = openFileDialog.FileName;
+                fotoPerfil.Image = Image.FromFile(caminhoFoto);
+            }
         }
     }
 }

@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.btnBanco);
             this.panel1.Controls.Add(this.btnHistorico);
             this.panel1.Controls.Add(this.btnRegistrarPonto);
-            this.panel1.Location = new System.Drawing.Point(205, 134);
+            this.panel1.Location = new System.Drawing.Point(205, 153);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 198);
             this.panel1.TabIndex = 2;
@@ -93,6 +93,7 @@
             // btnRelatorio
             // 
             this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorio.ForeColor = System.Drawing.Color.White;
             this.btnRelatorio.Location = new System.Drawing.Point(32, 96);
             this.btnRelatorio.Name = "btnRelatorio";
@@ -105,6 +106,7 @@
             // btnBanco
             // 
             this.btnBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.ForeColor = System.Drawing.Color.White;
             this.btnBanco.Location = new System.Drawing.Point(32, 136);
             this.btnBanco.Name = "btnBanco";
@@ -117,6 +119,7 @@
             // btnHistorico
             // 
             this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorico.ForeColor = System.Drawing.Color.White;
             this.btnHistorico.Location = new System.Drawing.Point(32, 56);
             this.btnHistorico.Name = "btnHistorico";
@@ -129,6 +132,7 @@
             // btnRegistrarPonto
             // 
             this.btnRegistrarPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRegistrarPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegistrarPonto.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarPonto.Location = new System.Drawing.Point(32, 16);
@@ -158,6 +162,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Início";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

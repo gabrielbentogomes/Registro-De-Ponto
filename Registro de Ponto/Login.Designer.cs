@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.mostraSenha = new System.Windows.Forms.CheckBox();
             this.linkCadastro = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,15 +41,14 @@
             this.usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.mostraSenha);
             this.panel1.Controls.Add(this.linkCadastro);
             this.panel1.Controls.Add(this.label3);
@@ -58,11 +58,21 @@
             this.panel1.Controls.Add(this.usuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(255, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(290, 425);
             this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(73, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 37);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "TimeTrackPro";
             // 
             // mostraSenha
             // 
@@ -188,16 +198,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuário: ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Registro_de_Ponto.Properties.Resources.calendario;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,12 +206,12 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de ponto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,7 +230,7 @@
         private System.Windows.Forms.LinkLabel linkCadastro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox mostraSenha;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

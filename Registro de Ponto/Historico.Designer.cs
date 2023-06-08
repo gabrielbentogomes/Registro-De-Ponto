@@ -145,71 +145,91 @@
             // 
             // textBox222
             // 
+            this.textBox222.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox222.Location = new System.Drawing.Point(556, 54);
             this.textBox222.Name = "textBox222";
+            this.textBox222.ReadOnly = true;
             this.textBox222.Size = new System.Drawing.Size(57, 20);
             this.textBox222.TabIndex = 258;
             // 
             // textBox224
             // 
+            this.textBox224.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox224.Location = new System.Drawing.Point(556, 28);
             this.textBox224.Name = "textBox224";
+            this.textBox224.ReadOnly = true;
             this.textBox224.Size = new System.Drawing.Size(57, 20);
             this.textBox224.TabIndex = 257;
             // 
             // textBox226
             // 
+            this.textBox226.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox226.Location = new System.Drawing.Point(406, 54);
             this.textBox226.Name = "textBox226";
+            this.textBox226.ReadOnly = true;
             this.textBox226.Size = new System.Drawing.Size(138, 20);
             this.textBox226.TabIndex = 256;
             // 
             // textBox229
             // 
+            this.textBox229.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox229.Location = new System.Drawing.Point(406, 28);
             this.textBox229.Name = "textBox229";
+            this.textBox229.ReadOnly = true;
             this.textBox229.Size = new System.Drawing.Size(138, 20);
             this.textBox229.TabIndex = 255;
             // 
             // textBox231
             // 
+            this.textBox231.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox231.Location = new System.Drawing.Point(262, 54);
             this.textBox231.Name = "textBox231";
+            this.textBox231.ReadOnly = true;
             this.textBox231.Size = new System.Drawing.Size(120, 20);
             this.textBox231.TabIndex = 254;
             // 
             // textBox233
             // 
+            this.textBox233.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox233.Location = new System.Drawing.Point(262, 28);
             this.textBox233.Name = "textBox233";
+            this.textBox233.ReadOnly = true;
             this.textBox233.Size = new System.Drawing.Size(120, 20);
             this.textBox233.TabIndex = 253;
             // 
             // textBox235
             // 
+            this.textBox235.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox235.Location = new System.Drawing.Point(128, 54);
             this.textBox235.Name = "textBox235";
+            this.textBox235.ReadOnly = true;
             this.textBox235.Size = new System.Drawing.Size(85, 20);
             this.textBox235.TabIndex = 252;
             // 
             // textBox237
             // 
+            this.textBox237.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox237.Location = new System.Drawing.Point(7, 54);
             this.textBox237.Name = "textBox237";
+            this.textBox237.ReadOnly = true;
             this.textBox237.Size = new System.Drawing.Size(85, 20);
             this.textBox237.TabIndex = 251;
             // 
             // textBox239
             // 
+            this.textBox239.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox239.Location = new System.Drawing.Point(128, 28);
             this.textBox239.Name = "textBox239";
+            this.textBox239.ReadOnly = true;
             this.textBox239.Size = new System.Drawing.Size(85, 20);
             this.textBox239.TabIndex = 250;
             // 
             // textBox240
             // 
+            this.textBox240.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox240.Location = new System.Drawing.Point(7, 28);
             this.textBox240.Name = "textBox240";
+            this.textBox240.ReadOnly = true;
             this.textBox240.Size = new System.Drawing.Size(85, 20);
             this.textBox240.TabIndex = 249;
             // 
@@ -247,9 +267,11 @@
             // 
             // nomeUsuario
             // 
+            this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.nomeUsuario.Location = new System.Drawing.Point(202, 12);
             this.nomeUsuario.Multiline = true;
             this.nomeUsuario.Name = "nomeUsuario";
+            this.nomeUsuario.ReadOnly = true;
             this.nomeUsuario.Size = new System.Drawing.Size(301, 20);
             this.nomeUsuario.TabIndex = 22;
             // 
@@ -272,6 +294,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "Historico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Histórico de ponto";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

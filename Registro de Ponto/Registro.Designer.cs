@@ -48,7 +48,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.dataHora);
@@ -119,6 +119,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(117, 229);
@@ -131,18 +132,24 @@
             // 
             // dataHora
             // 
+            this.dataHora.BackColor = System.Drawing.SystemColors.Control;
+            this.dataHora.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataHora.Location = new System.Drawing.Point(169, 108);
             this.dataHora.Multiline = true;
             this.dataHora.Name = "dataHora";
+            this.dataHora.ReadOnly = true;
             this.dataHora.Size = new System.Drawing.Size(139, 24);
             this.dataHora.TabIndex = 8;
             this.dataHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nomeUsuario
             // 
+            this.nomeUsuario.BackColor = System.Drawing.SystemColors.Control;
+            this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.nomeUsuario.Location = new System.Drawing.Point(77, 50);
             this.nomeUsuario.Multiline = true;
             this.nomeUsuario.Name = "nomeUsuario";
+            this.nomeUsuario.ReadOnly = true;
             this.nomeUsuario.Size = new System.Drawing.Size(301, 24);
             this.nomeUsuario.TabIndex = 7;
             this.nomeUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,10 +197,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(423, 308);
             this.Controls.Add(this.panel2);
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
