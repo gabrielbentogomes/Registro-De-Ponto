@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historico.Designer.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,11 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Historico.cs">
+    <Compile Include="Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Historico.Designer.cs">
-      <DependentUpon>Historico.cs</DependentUpon>
+    <Compile Include="Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatorio.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Banco.resx">
       <DependentUpon>Banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historico.resx">
+      <DependentUpon>Historico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -120,8 +129,8 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Historico.resx">
-      <DependentUpon>Historico.cs</DependentUpon>
+    <EmbeddedResource Include="Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio.resx">
       <DependentUpon>Relatorio.cs</DependentUpon>

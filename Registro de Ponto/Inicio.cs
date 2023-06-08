@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Registro_de_Ponto
 {
@@ -15,43 +16,37 @@ namespace Registro_de_Ponto
         public Inicio()
         {
             InitializeComponent();
-            ExibirDataAtual();
-        }
-
-        private void ExibirDataAtual()
-        {
-            dataHora.Text = DateTime.Now.ToString();
-            dataHora.ReadOnly = true;
-        }
-
-        private void nomeUsuario_TextChanged(object sender, EventArgs e)
-        {
-            /*GABRIEL, AQUI VOCÊ TEM QUE PEGAR DO BD O NOME COMPLETO DO USUÁRIO*/
-            nomeUsuario.ReadOnly = true;
         }
 
         private void btnHistorico_Click(object sender, EventArgs e)
         {
             new Historico().Show();
-            this.Hide();
         }
 
         private void btnBanco_Click(object sender, EventArgs e)
         {
             new Banco().Show(); 
-            this.Hide();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             new Perfil().Show();
-            this.Hide();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             new Login().Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnRegistrarPonto_Click(object sender, EventArgs e)
+        {
+            new Registro().Show();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            new Relatorio().Show();
         }
     }
 }

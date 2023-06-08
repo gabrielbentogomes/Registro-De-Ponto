@@ -17,22 +17,5 @@ namespace Registro_de_Ponto
             InitializeComponent();
         }
 
-        private void btnRegistrarPonto_Click(object sender, EventArgs e)
-        {
-            new Inicio().Show();
-            this.Hide();
-        }
-
-        private void btnHistorico_Click(object sender, EventArgs e)
-        {
-            new Historico().Show();
-            this.Hide();
-        }
-
-        private void btnRelatorio_Click(object sender, EventArgs e)
-        {
-            new Relatorio().Show(); 
-            this.Hide();
-        }
     }
 }
