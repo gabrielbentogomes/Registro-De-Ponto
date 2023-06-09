@@ -15,8 +15,14 @@ namespace Registro_de_Ponto
         public Perfil()
         {
             InitializeComponent();
+            mostrarNome();
         }
+        private void mostrarNome()
+        {
+            FuncaoPegarUser f1 = new FuncaoPegarUser();
+            nomeUsuario.Text = f1.BuscarInformacoesUsuario();
 
+        }
         private void btnSair_Click(object sender, EventArgs e)
         {
             new Login().Show();

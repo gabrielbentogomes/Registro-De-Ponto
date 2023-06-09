@@ -57,6 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FuncaoPegarUser.cs" />
     <Compile Include="Historico.cs">
       <SubType>Form</SubType>
     </Compile>

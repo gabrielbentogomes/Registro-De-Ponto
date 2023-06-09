@@ -28,19 +28,9 @@ namespace Registro_de_Ponto
         }
         private void mostrarNome()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            con.Open();
-            string login = "SELECT usuario FROM user_tb WHERE usuario = @Nome";
-            cmd = new SqlCommand(login, con);
-            cmd.Parameters.AddWithValue("@Nome", Pessoa.Nome.ToString());
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
-            {
-                nomeUsuario.Text = reader["usuario"].ToString();
-            }
+            FuncaoPegarUser f1 = new FuncaoPegarUser();
+            nomeUsuario.Text = f1.BuscarInformacoesUsuario();
+
 
         }
         private void nomeUsuario_TextChanged_1(object sender, EventArgs e)

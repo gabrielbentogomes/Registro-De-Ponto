@@ -32,7 +32,7 @@
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.btnControleJornada = new System.Windows.Forms.ToolStripMenuItem();
-            this.nome = new System.Windows.Forms.TextBox();
+            this.nomeUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,14 +80,14 @@
             this.btnControleJornada.Text = "Controle de Jornada";
             this.btnControleJornada.Click += new System.EventHandler(this.btnControleJornada_Click);
             // 
-            // nome
+            // nomeUsuario
             // 
-            this.nome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.nome.Location = new System.Drawing.Point(204, 83);
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Size = new System.Drawing.Size(328, 20);
-            this.nome.TabIndex = 9;
+            this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nomeUsuario.Location = new System.Drawing.Point(204, 83);
+            this.nomeUsuario.Name = "nomeUsuario";
+            this.nomeUsuario.ReadOnly = true;
+            this.nomeUsuario.Size = new System.Drawing.Size(328, 20);
+            this.nomeUsuario.TabIndex = 9;
             // 
             // label3
             // 
@@ -136,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.adicionarFoto);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.nome);
+            this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Perfil";
@@ -157,7 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnSair;
         private System.Windows.Forms.ToolStripMenuItem btnPerfil;
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
-        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox nomeUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox fotoPerfil;
         private System.Windows.Forms.Panel panel1;
