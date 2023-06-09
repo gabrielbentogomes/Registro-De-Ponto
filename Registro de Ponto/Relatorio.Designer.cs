@@ -35,7 +35,7 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnSelecionarPeriodo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.nome = new System.Windows.Forms.TextBox();
+            this.nomeUsuario = new System.Windows.Forms.TextBox();
             this.solicitarRelatorio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -102,14 +102,14 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Nome:";
             // 
-            // nome
+            // nomeUsuario
             // 
-            this.nome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.nome.Location = new System.Drawing.Point(66, 327);
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Size = new System.Drawing.Size(328, 20);
-            this.nome.TabIndex = 7;
+            this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nomeUsuario.Location = new System.Drawing.Point(66, 327);
+            this.nomeUsuario.Name = "nomeUsuario";
+            this.nomeUsuario.ReadOnly = true;
+            this.nomeUsuario.Size = new System.Drawing.Size(328, 20);
+            this.nomeUsuario.TabIndex = 7;
             // 
             // solicitarRelatorio
             // 
@@ -126,7 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 450);
             this.Controls.Add(this.solicitarRelatorio);
-            this.Controls.Add(this.nome);
+            this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSelecionarPeriodo);
             this.Controls.Add(this.monthCalendar1);
@@ -151,7 +151,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button btnSelecionarPeriodo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox nomeUsuario;
         private System.Windows.Forms.Button solicitarRelatorio;
     }
 }

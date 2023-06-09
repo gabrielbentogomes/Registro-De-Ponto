@@ -15,8 +15,16 @@ namespace Registro_de_Ponto
         public Historico()
         {
             InitializeComponent();
+            mostrarNome();
+        }
+        private void mostrarNome()
+        {
+            FuncaoPegarUser f1 = new FuncaoPegarUser();
+            nomeUsuario.Text = f1.BuscarInformacoesUsuario();
+
+
         }
 
-        
+
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.solicitarBanco = new System.Windows.Forms.Button();
-            this.nome = new System.Windows.Forms.TextBox();
+            this.nomeUsuario = new System.Windows.Forms.TextBox();
             this.btnSelecionarPeriodo = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.dataFinal = new System.Windows.Forms.TextBox();
@@ -48,13 +48,13 @@
             this.solicitarBanco.Text = "Solicitar";
             this.solicitarBanco.UseVisualStyleBackColor = true;
             // 
-            // nome
+            // nomeUsuario
             // 
-            this.nome.Location = new System.Drawing.Point(70, 342);
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Size = new System.Drawing.Size(328, 20);
-            this.nome.TabIndex = 14;
+            this.nomeUsuario.Location = new System.Drawing.Point(70, 342);
+            this.nomeUsuario.Name = "nomeUsuario";
+            this.nomeUsuario.ReadOnly = true;
+            this.nomeUsuario.Size = new System.Drawing.Size(328, 20);
+            this.nomeUsuario.TabIndex = 14;
             // 
             // btnSelecionarPeriodo
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.solicitarBanco);
-            this.Controls.Add(this.nome);
+            this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.btnSelecionarPeriodo);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dataFinal);
@@ -142,7 +142,7 @@
         #endregion
 
         private System.Windows.Forms.Button solicitarBanco;
-        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox nomeUsuario;
         private System.Windows.Forms.Button btnSelecionarPeriodo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox dataFinal;
