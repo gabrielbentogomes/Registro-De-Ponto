@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace Registro_de_Ponto
 {
     public partial class Registro : Form
@@ -16,6 +18,7 @@ namespace Registro_de_Ponto
         {
             InitializeComponent();
             ExibirDataAtual();
+            mostrarNome();
         }
 
         private void ExibirDataAtual()
@@ -23,10 +26,26 @@ namespace Registro_de_Ponto
             dataHora.Text = DateTime.Now.ToString();
             dataHora.ReadOnly = true;
         }
+        private void mostrarNome()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            con.Open();
+            string login = "SELECT usuario FROM user_tb WHERE usuario = @Nome";
+            cmd = new SqlCommand(login, con);
+            cmd.Parameters.AddWithValue("@Nome", Pessoa.Nome.ToString());
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                nomeUsuario.Text = reader["usuario"].ToString();
+            }
 
+        }
         private void nomeUsuario_TextChanged_1(object sender, EventArgs e)
         {
-            /*GABRIEL, AQUI VOCÊ TEM QUE PEGAR DO BD O NOME COMPLETO DO USUÁRIO*/
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -36,4 +55,6 @@ namespace Registro_de_Ponto
         }
 
     }
+
+
 }

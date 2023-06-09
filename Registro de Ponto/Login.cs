@@ -7,7 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Registro_de_Ponto
 {
@@ -36,8 +38,9 @@ namespace Registro_de_Ponto
             this.Hide();
         }
 
-        private void loginEntrar_Click(object sender, EventArgs e)
+        public void loginEntrar_Click(object sender, EventArgs e)
         {
+            
             if (radioFunc.Checked)
             {
 
@@ -51,6 +54,7 @@ namespace Registro_de_Ponto
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read()==true)
                 {
+                    Pessoa.Nome = usuario.Text;
                     new Inicio().Show();
                     this.Hide();
                 }
@@ -82,6 +86,7 @@ namespace Registro_de_Ponto
                     MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
         }
 
         private void radioFunc_CheckedChanged(object sender, EventArgs e)
