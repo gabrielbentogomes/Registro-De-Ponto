@@ -31,8 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.mostraSenha = new System.Windows.Forms.CheckBox();
-            this.linkCadastro = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.loginEntrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioSuper = new System.Windows.Forms.RadioButton();
@@ -50,8 +48,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.mostraSenha);
-            this.panel1.Controls.Add(this.linkCadastro);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginEntrar);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.senha);
@@ -60,7 +56,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(255, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 425);
+            this.panel1.Size = new System.Drawing.Size(290, 386);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -86,30 +82,6 @@
             this.mostraSenha.Text = "Mostrar senha";
             this.mostraSenha.UseVisualStyleBackColor = true;
             this.mostraSenha.CheckedChanged += new System.EventHandler(this.mostraSenha_CheckedChanged);
-            // 
-            // linkCadastro
-            // 
-            this.linkCadastro.AutoSize = true;
-            this.linkCadastro.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F);
-            this.linkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkCadastro.Location = new System.Drawing.Point(187, 381);
-            this.linkCadastro.Name = "linkCadastro";
-            this.linkCadastro.Size = new System.Drawing.Size(77, 28);
-            this.linkCadastro.TabIndex = 9;
-            this.linkCadastro.TabStop = true;
-            this.linkCadastro.Text = "Cadastre-se";
-            this.linkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCadastro_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 384);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Ainda não possui conta?";
             // 
             // loginEntrar
             // 
@@ -225,8 +197,6 @@
         private System.Windows.Forms.TextBox usuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button loginEntrar;
-        private System.Windows.Forms.LinkLabel linkCadastro;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox mostraSenha;
         private System.Windows.Forms.Label label4;
     }

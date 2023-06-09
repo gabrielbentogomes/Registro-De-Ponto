@@ -27,13 +27,13 @@ namespace Registro_de_Ponto
         }
         private void btnRegistrarPonto_Click(object sender, EventArgs e)
         {
-            new Inicio().Show();
+            new Inicio_Func().Show();
             this.Hide();
         }
 
         private void btnHistorico_Click(object sender, EventArgs e)
         {
-            new Historico().Show();
+            new HistoricoFunc().Show();
             this.Hide();
         }
 

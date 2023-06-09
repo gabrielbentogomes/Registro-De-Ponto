@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class Historico : Form
+    public partial class HistoricoSuper : Form
     {
-        public Historico()
+        public HistoricoSuper()
         {
             InitializeComponent();
-            mostrarNome();
         }
-        private void mostrarNome()
-        {
-            FuncaoPegarUser f1 = new FuncaoPegarUser();
-            nomeUsuario.Text = f1.BuscarInformacoesUsuario();
-
-
-        }
-
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Registro_de_Ponto
 {
-    partial class Inicio
+    partial class Inicio_Func
     {
         /// <summary>
         /// Required designer variable.
@@ -153,7 +153,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Bem-Vindo(a) a página inicial!";
             // 
-            // Inicio
+            // Inicio_Func
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Inicio";
+            this.Name = "Inicio_Func";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Início";
             this.menuStrip1.ResumeLayout(false);

@@ -17,12 +17,6 @@ namespace Registro_de_Ponto
             InitializeComponent();
         }
 
-        private void linkEntrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new Login().Show();
-            this.Hide();
-        }
-
         private void mostraSenha_CheckedChanged(object sender, EventArgs e)
         {
             if (mostraSenha.Checked)

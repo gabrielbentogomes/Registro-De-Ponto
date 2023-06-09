@@ -123,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.novaSenha);
             this.Name = "Senha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Senha";
             this.ResumeLayout(false);
             this.PerformLayout();

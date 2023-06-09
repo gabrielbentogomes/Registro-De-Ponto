@@ -11,16 +11,16 @@ using System.Xml;
 
 namespace Registro_de_Ponto
 {
-    public partial class Inicio : Form
+    public partial class Inicio_Func : Form
     {
-        public Inicio()
+        public Inicio_Func()
         {
             InitializeComponent();
         }
 
         private void btnHistorico_Click(object sender, EventArgs e)
         {
-            new Historico().Show();
+            new HistoricoFunc().Show();
         }
 
         private void btnBanco_Click(object sender, EventArgs e)

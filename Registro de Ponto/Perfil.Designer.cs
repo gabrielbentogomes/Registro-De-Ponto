@@ -34,13 +34,8 @@
             this.btnControleJornada = new System.Windows.Forms.ToolStripMenuItem();
             this.nomeUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.fotoPerfil = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.adicionarFoto = new System.Windows.Forms.LinkLabel();
             this.alteraSenha = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -52,7 +47,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(499, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +79,7 @@
             // nomeUsuario
             // 
             this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.nomeUsuario.Location = new System.Drawing.Point(204, 83);
+            this.nomeUsuario.Location = new System.Drawing.Point(92, 47);
             this.nomeUsuario.Name = "nomeUsuario";
             this.nomeUsuario.ReadOnly = true;
             this.nomeUsuario.Size = new System.Drawing.Size(328, 20);
@@ -93,49 +88,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 86);
+            this.label3.Location = new System.Drawing.Point(40, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Usuário:";
-            // 
-            // fotoPerfil
-            // 
-            this.fotoPerfil.Location = new System.Drawing.Point(10, 7);
-            this.fotoPerfil.Name = "fotoPerfil";
-            this.fotoPerfil.Size = new System.Drawing.Size(120, 120);
-            this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPerfil.TabIndex = 10;
-            this.fotoPerfil.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.fotoPerfil);
-            this.panel1.Location = new System.Drawing.Point(635, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 137);
-            this.panel1.TabIndex = 11;
-            // 
-            // adicionarFoto
-            // 
-            this.adicionarFoto.ActiveLinkColor = System.Drawing.Color.Black;
-            this.adicionarFoto.AutoSize = true;
-            this.adicionarFoto.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.adicionarFoto.Location = new System.Drawing.Point(657, 187);
-            this.adicionarFoto.Name = "adicionarFoto";
-            this.adicionarFoto.Size = new System.Drawing.Size(98, 13);
-            this.adicionarFoto.TabIndex = 12;
-            this.adicionarFoto.TabStop = true;
-            this.adicionarFoto.Text = "Alterar foto de perfil";
-            this.adicionarFoto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.adicionarFoto_LinkClicked);
             // 
             // alteraSenha
             // 
             this.alteraSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.alteraSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.alteraSenha.ForeColor = System.Drawing.Color.White;
-            this.alteraSenha.Location = new System.Drawing.Point(247, 187);
+            this.alteraSenha.Location = new System.Drawing.Point(140, 106);
             this.alteraSenha.Name = "alteraSenha";
             this.alteraSenha.Size = new System.Drawing.Size(213, 41);
             this.alteraSenha.TabIndex = 13;
@@ -147,10 +111,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(499, 172);
             this.Controls.Add(this.alteraSenha);
-            this.Controls.Add(this.adicionarFoto);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
@@ -159,8 +121,6 @@
             this.Text = "Perfil";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,9 +134,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
         private System.Windows.Forms.TextBox nomeUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox fotoPerfil;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel adicionarFoto;
         private System.Windows.Forms.Button alteraSenha;
     }
 }

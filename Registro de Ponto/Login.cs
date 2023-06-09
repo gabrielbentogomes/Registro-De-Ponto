@@ -32,12 +32,6 @@ namespace Registro_de_Ponto
             }
         }
 
-        private void linkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new Cadastro().Show();
-            this.Hide();
-        }
-
         public void loginEntrar_Click(object sender, EventArgs e)
         {
             
@@ -55,7 +49,7 @@ namespace Registro_de_Ponto
                 if (dr.Read()==true)
                 {
                     Pessoa.Nome = usuario.Text;
-                    new Inicio().Show();
+                    new Inicio_Func().Show();
                     this.Hide();
                 }
                 else
@@ -78,7 +72,7 @@ namespace Registro_de_Ponto
 
                 if (dr.Read()==true)
                 {
-                    new Inicio().Show();
+                    new Inicio_Super().Show();
                     this.Hide();
                 }
                 else

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class Perfil : Form
+    public partial class HistoricoFunc : Form
     {
-        public Perfil()
+        public HistoricoFunc()
         {
             InitializeComponent();
             mostrarNome();
@@ -21,23 +21,7 @@ namespace Registro_de_Ponto
         {
             FuncaoPegarUser f1 = new FuncaoPegarUser();
             nomeUsuario.Text = f1.BuscarInformacoesUsuario();
-
-        }
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            new Login().Show();
-            this.Close();
         }
 
-        private void btnControleJornada_Click(object sender, EventArgs e)
-        {
-            new Inicio_Func().Show();
-            this.Close();
-        }
-
-        private void alteraSenha_Click(object sender, EventArgs e)
-        {
-            new Senha().Show();
-        }
     }
 }
