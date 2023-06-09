@@ -47,5 +47,10 @@ namespace Registro_de_Ponto
                 fotoPerfil.Image = Image.FromFile(caminhoFoto);
             }
         }
+
+        private void alteraSenha_Click(object sender, EventArgs e)
+        {
+            new Senha().Show();
+        }
     }
 }

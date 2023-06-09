@@ -103,6 +103,12 @@
     <Compile Include="Relatorio.Designer.cs">
       <DependentUpon>Relatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senha.Designer.cs">
+      <DependentUpon>Senha.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Banco.resx">
       <DependentUpon>Banco.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio.resx">
       <DependentUpon>Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senha.resx">
+      <DependentUpon>Senha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

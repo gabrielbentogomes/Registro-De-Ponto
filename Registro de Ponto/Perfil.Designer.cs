@@ -37,6 +37,7 @@
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.adicionarFoto = new System.Windows.Forms.LinkLabel();
+            this.alteraSenha = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,11 +93,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 86);
+            this.label3.Location = new System.Drawing.Point(152, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Nome:";
+            this.label3.Text = "Usuário:";
             // 
             // fotoPerfil
             // 
@@ -129,11 +130,25 @@
             this.adicionarFoto.Text = "Alterar foto de perfil";
             this.adicionarFoto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.adicionarFoto_LinkClicked);
             // 
+            // alteraSenha
+            // 
+            this.alteraSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.alteraSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.alteraSenha.ForeColor = System.Drawing.Color.White;
+            this.alteraSenha.Location = new System.Drawing.Point(247, 187);
+            this.alteraSenha.Name = "alteraSenha";
+            this.alteraSenha.Size = new System.Drawing.Size(213, 41);
+            this.alteraSenha.TabIndex = 13;
+            this.alteraSenha.Text = "Alterar Senha";
+            this.alteraSenha.UseVisualStyleBackColor = false;
+            this.alteraSenha.Click += new System.EventHandler(this.alteraSenha_Click);
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.alteraSenha);
             this.Controls.Add(this.adicionarFoto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.nomeUsuario);
@@ -162,5 +177,6 @@
         private System.Windows.Forms.PictureBox fotoPerfil;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel adicionarFoto;
+        private System.Windows.Forms.Button alteraSenha;
     }
 }

@@ -142,7 +142,6 @@
             this.radioSuper.TabStop = true;
             this.radioSuper.Text = "Supervisor";
             this.radioSuper.UseVisualStyleBackColor = true;
-            this.radioSuper.CheckedChanged += new System.EventHandler(this.radioSuper_CheckedChanged);
             // 
             // radioFunc
             // 
@@ -155,7 +154,6 @@
             this.radioFunc.TabStop = true;
             this.radioFunc.Text = "Funcionário";
             this.radioFunc.UseVisualStyleBackColor = true;
-            this.radioFunc.CheckedChanged += new System.EventHandler(this.radioFunc_CheckedChanged);
             // 
             // senha
             // 
