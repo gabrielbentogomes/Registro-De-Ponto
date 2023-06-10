@@ -57,7 +57,7 @@ namespace Registro_de_Ponto
                     MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if(radioSuper.Checked)
+            else if(radioAdmin.Checked)
             {
 
                 SqlConnection con = new SqlConnection();

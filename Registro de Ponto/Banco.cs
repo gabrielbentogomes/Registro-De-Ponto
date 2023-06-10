@@ -31,5 +31,11 @@ namespace Registro_de_Ponto
 
 
         }
+
+        private void solicitarBanco_Click(object sender, EventArgs e)
+        {
+            new MostraBanco().Show();
+            this.Close();
+        }
     }
 }

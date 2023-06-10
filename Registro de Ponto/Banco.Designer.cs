@@ -47,10 +47,11 @@
             this.solicitarBanco.TabIndex = 15;
             this.solicitarBanco.Text = "Solicitar";
             this.solicitarBanco.UseVisualStyleBackColor = true;
+            this.solicitarBanco.Click += new System.EventHandler(this.solicitarBanco_Click);
             // 
             // nomeUsuario
             // 
-            this.nomeUsuario.Location = new System.Drawing.Point(70, 342);
+            this.nomeUsuario.Location = new System.Drawing.Point(78, 342);
             this.nomeUsuario.Name = "nomeUsuario";
             this.nomeUsuario.ReadOnly = true;
             this.nomeUsuario.Size = new System.Drawing.Size(328, 20);

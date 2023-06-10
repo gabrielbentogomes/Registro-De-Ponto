@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.btnBanco);
             this.panel1.Controls.Add(this.btnHistorico);
             this.panel1.Controls.Add(this.btnRegistrarPonto);
-            this.panel1.Location = new System.Drawing.Point(205, 153);
+            this.panel1.Location = new System.Drawing.Point(241, 152);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 198);
             this.panel1.TabIndex = 2;

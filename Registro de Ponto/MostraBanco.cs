@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class HistoricoSuper : Form
+    public partial class MostraBanco : Form
     {
-        public HistoricoSuper()
+        public MostraBanco()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class Cadastro : Form
+    public partial class CadastroFunc : Form
     {
-        public Cadastro()
+        public CadastroFunc()
         {
             InitializeComponent();
         }
@@ -21,14 +21,13 @@ namespace Registro_de_Ponto
         {
             if (mostraSenha.Checked)
             {
-                senhaCadastro.PasswordChar = '\0';
-                confirmaSenha.PasswordChar = '\0';
+                senha.PasswordChar = '\0';
             }
             else
             {
-                senhaCadastro.PasswordChar = '*';
-                confirmaSenha.PasswordChar = '*';
+                senha.PasswordChar = '*';
             }
         }
+
     }
 }

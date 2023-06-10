@@ -119,6 +119,7 @@
             this.solicitarRelatorio.TabIndex = 8;
             this.solicitarRelatorio.Text = "Solicitar";
             this.solicitarRelatorio.UseVisualStyleBackColor = true;
+            this.solicitarRelatorio.Click += new System.EventHandler(this.solicitarRelatorio_Click);
             // 
             // Relatorio
             // 

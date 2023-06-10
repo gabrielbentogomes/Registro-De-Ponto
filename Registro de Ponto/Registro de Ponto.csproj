@@ -52,6 +52,12 @@
     <Compile Include="Banco.Designer.cs">
       <DependentUpon>Banco.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroAdmin.Designer.cs">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,11 +70,17 @@
     <Compile Include="HistoricoFunc.Designer.cs">
       <DependentUpon>HistoricoFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistoricoSuper.cs">
+    <Compile Include="MostraBanco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistoricoSuper.Designer.cs">
-      <DependentUpon>HistoricoSuper.cs</DependentUpon>
+    <Compile Include="MostraBanco.Designer.cs">
+      <DependentUpon>MostraBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TratarPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TratarPonto.Designer.cs">
+      <DependentUpon>TratarPonto.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioSuper.cs">
       <SubType>Form</SubType>
@@ -82,11 +94,17 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs">
+    <Compile Include="CadastroFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <Compile Include="CadastroFunc.Designer.cs">
+      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostraRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostraRelatorio.Designer.cs">
+      <DependentUpon>MostraRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Perfil.cs">
       <SubType>Form</SubType>
@@ -124,11 +142,14 @@
     <EmbeddedResource Include="Banco.resx">
       <DependentUpon>Banco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAdmin.resx">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HistoricoFunc.resx">
       <DependentUpon>HistoricoFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoricoSuper.resx">
-      <DependentUpon>HistoricoSuper.cs</DependentUpon>
+    <EmbeddedResource Include="TratarPonto.resx">
+      <DependentUpon>TratarPonto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSuper.resx">
       <DependentUpon>InicioSuper.cs</DependentUpon>
@@ -136,8 +157,11 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroFunc.resx">
+      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostraRelatorio.resx">
+      <DependentUpon>MostraRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>

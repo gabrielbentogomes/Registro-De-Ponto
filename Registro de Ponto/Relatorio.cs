@@ -48,5 +48,11 @@ namespace Registro_de_Ponto
             dataInicio.Text = monthCalendar1.SelectionStart.ToShortDateString();
             dataFinal.Text = monthCalendar1.SelectionEnd.ToShortDateString();
         }
+
+        private void solicitarRelatorio_Click(object sender, EventArgs e)
+        {
+            new MostraRelatorio().Show();
+            this.Close();
+        }
     }
 }

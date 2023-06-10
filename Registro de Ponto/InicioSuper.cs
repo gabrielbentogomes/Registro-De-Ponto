@@ -29,12 +29,29 @@ namespace Registro_de_Ponto
 
         private void btntratarPonto_Click(object sender, EventArgs e)
         {
-
+            new TratarPonto().Show();
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            new Cadastro().Show();
+            new CadastroFunc().Show();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            new Perfil().Show();
+            this.Close();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
+
+        private void btnCadastroAdmin_Click(object sender, EventArgs e)
+        {
+            new CadastroAdmin().Show();
         }
     }
 }
