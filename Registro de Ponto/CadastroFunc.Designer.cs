@@ -40,7 +40,7 @@
             this.CSenha = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.mostraSenha = new System.Windows.Forms.CheckBox();
-            this.senhaCadastro = new System.Windows.Forms.TextBox();
+            this.matriculaa = new System.Windows.Forms.TextBox();
             this.nome = new System.Windows.Forms.TextBox();
             this.matricula = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.CSenha);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.mostraSenha);
-            this.panel1.Controls.Add(this.senhaCadastro);
+            this.panel1.Controls.Add(this.matriculaa);
             this.panel1.Controls.Add(this.nome);
             this.panel1.Controls.Add(this.matricula);
             this.panel1.Controls.Add(this.label1);
@@ -173,6 +173,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "CADASTRAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mostraSenha
             // 
@@ -187,14 +188,14 @@
             this.mostraSenha.UseVisualStyleBackColor = true;
             this.mostraSenha.CheckedChanged += new System.EventHandler(this.mostraSenha_CheckedChanged);
             // 
-            // senhaCadastro
+            // matriculaa
             // 
-            this.senhaCadastro.Font = new System.Drawing.Font("Source Sans Pro", 14.25F);
-            this.senhaCadastro.Location = new System.Drawing.Point(33, 194);
-            this.senhaCadastro.Multiline = true;
-            this.senhaCadastro.Name = "senhaCadastro";
-            this.senhaCadastro.Size = new System.Drawing.Size(234, 29);
-            this.senhaCadastro.TabIndex = 4;
+            this.matriculaa.Font = new System.Drawing.Font("Source Sans Pro", 14.25F);
+            this.matriculaa.Location = new System.Drawing.Point(33, 194);
+            this.matriculaa.Multiline = true;
+            this.matriculaa.Name = "matriculaa";
+            this.matriculaa.Size = new System.Drawing.Size(234, 29);
+            this.matriculaa.TabIndex = 4;
             // 
             // nome
             // 
@@ -247,7 +248,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox mostraSenha;
-        private System.Windows.Forms.TextBox senhaCadastro;
+        private System.Windows.Forms.TextBox matriculaa;
         private System.Windows.Forms.TextBox nome;
         private System.Windows.Forms.Label matricula;
         private System.Windows.Forms.Label label1;

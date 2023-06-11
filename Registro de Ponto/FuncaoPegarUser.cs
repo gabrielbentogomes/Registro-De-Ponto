@@ -18,16 +18,16 @@ namespace Registro_de_Ponto
             {
                 con.Open();
 
-                string login = "SELECT usuario FROM user_tb WHERE usuario = @Nome";
+                string login = "SELECT nome FROM funcionario WHERE matricula = @Matricula";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", Pessoa.Nome);
+                    cmd.Parameters.AddWithValue("@Matricula", Pessoa.Matricula);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            nome = reader["usuario"].ToString();
+                            nome = reader["nome"].ToString();
                         }
                     }
                 }

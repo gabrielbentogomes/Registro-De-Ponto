@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Registro_de_Ponto
 {
-    internal class Pessoa
+    internal class Administrador
     {
         private static string nome = string.Empty;
         private static string matricula = string.Empty;
         private static string senha = string.Empty;
-        private static DateTime horaEntrada;
-        private static DateTime horaSaida;
-        private static string horaTotal = string.Empty;
 
         internal static string Nome
         {
@@ -28,24 +29,5 @@ namespace Registro_de_Ponto
             get { return senha; }
             set { senha = value; }
         }
-
-        internal static DateTime HoraEntrada
-        {
-            get { return horaEntrada; }
-            set { horaEntrada = value; }
-        }
-
-        internal static DateTime HoraSaida
-        {
-            get { return horaSaida; }
-            set { horaSaida = value; }
-        }
-
-        internal static string HoraTotal
-        {
-            get { return horaTotal; }
-            set { horaTotal = value; }
-        }
     }
-
 }

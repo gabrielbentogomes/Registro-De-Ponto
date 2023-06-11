@@ -43,12 +43,12 @@ namespace Registro_de_Ponto
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
-                string login = "SELECT * FROM user_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                string login = "SELECT * FROM funcionario WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read()==true)
                 {
-                    Pessoa.Nome = usuario.Text;
+                    Pessoa.Matricula = usuario.Text;
                     new Inicio_Func().Show();
                     this.Hide();
                 }
@@ -65,13 +65,14 @@ namespace Registro_de_Ponto
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
-                string login = "SELECT * FROM super_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                string login = "SELECT * FROM Administrador WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
 
                 if (dr.Read()==true)
                 {
+                    Administrador.Matricula = usuario.Text;
                     new Inicio_Super().Show();
                     this.Hide();
                 }
