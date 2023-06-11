@@ -52,6 +52,9 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblNomeFunc = new System.Windows.Forms.Label();
             this.lblMatricula = new System.Windows.Forms.Label();
+            this.lblEntrada = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblSaida = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -187,6 +190,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblSaida);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.lblEntrada);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
@@ -298,6 +304,34 @@
             this.lblMatricula.TabIndex = 11;
             this.lblMatricula.Text = "label16";
             // 
+            // lblEntrada
+            // 
+            this.lblEntrada.AutoSize = true;
+            this.lblEntrada.Location = new System.Drawing.Point(138, 63);
+            this.lblEntrada.Name = "lblEntrada";
+            this.lblEntrada.Size = new System.Drawing.Size(41, 13);
+            this.lblEntrada.TabIndex = 6;
+            this.lblEntrada.Text = "label16";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(194, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 13);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "às";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // lblSaida
+            // 
+            this.lblSaida.AutoSize = true;
+            this.lblSaida.Location = new System.Drawing.Point(227, 63);
+            this.lblSaida.Name = "lblSaida";
+            this.lblSaida.Size = new System.Drawing.Size(41, 13);
+            this.lblSaida.TabIndex = 8;
+            this.lblSaida.Text = "label18";
+            // 
             // MostraRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,5 +383,8 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblNomeFunc;
         private System.Windows.Forms.Label lblMatricula;
+        private System.Windows.Forms.Label lblEntrada;
+        private System.Windows.Forms.Label lblSaida;
+        private System.Windows.Forms.Label label17;
     }
 }

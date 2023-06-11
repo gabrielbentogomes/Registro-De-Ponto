@@ -15,12 +15,14 @@ namespace Registro_de_Ponto
 
             string nome = null;
             string matricula = null;
+            string horaEntrada = null;
+            string horaSaida = null;
 
             using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
             {
                 con.Open();
 
-                string login = "SELECT nome, matricula FROM funcionario WHERE matricula = @Matricula";
+                string login = "SELECT nome, matricula, horaEntrada, horaSaida FROM funcionario WHERE matricula = @Matricula";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);
@@ -32,6 +34,18 @@ namespace Registro_de_Ponto
     
                             nome = reader["nome"].ToString();
                             matricula = reader["matricula"].ToString();
+                            if (reader["horaEntrada"] != DBNull.Value)
+                            {
+                                TimeSpan horaEntradaDb = (TimeSpan)reader["horaEntrada"];
+                                horaEntrada = horaEntradaDb.ToString();
+                            }
+
+                            if (reader["horaSaida"] != DBNull.Value)
+                            {
+                                TimeSpan horaSaidaDb = (TimeSpan)reader["horaSaida"];
+                                horaSaida = horaSaidaDb.ToString();
+                            }
+
                         }
                     }
                 }
@@ -39,7 +53,7 @@ namespace Registro_de_Ponto
     
             }
             Pessoa pessoa = null;
-            pessoa = new Pessoa(nome.ToString(), matricula.ToString());
+            pessoa = new Pessoa(nome.ToString(), matricula.ToString(), horaEntrada.ToString(), horaSaida.ToString());
             return pessoa;
         }
 

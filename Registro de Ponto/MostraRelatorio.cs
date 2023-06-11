@@ -22,6 +22,13 @@ namespace Registro_de_Ponto
             FuncaoPegarUser f1 = new FuncaoPegarUser();
             lblNomeFunc.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
             lblMatricula.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
+            lblEntrada.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraEntrada;
+            lblSaida.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraSaida;
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

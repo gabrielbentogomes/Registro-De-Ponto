@@ -7,8 +7,8 @@ namespace Registro_de_Ponto
         private string nome;
         private string matricula;
         private string senha;
-        private DateTime horaEntrada;
-        private DateTime horaSaida;
+        private string horaEntrada;
+        private string horaSaida;
         private string horaTotal;
 
         internal string Nome
@@ -29,13 +29,13 @@ namespace Registro_de_Ponto
             set { senha = value; }
         }
 
-        internal DateTime HoraEntrada
+        internal string HoraEntrada
         {
             get { return horaEntrada; }
             set { horaEntrada = value; }
         }
 
-        internal DateTime HoraSaida
+        internal string HoraSaida
         {
             get { return horaSaida; }
             set { horaSaida = value; }
@@ -48,10 +48,12 @@ namespace Registro_de_Ponto
         }
 
         // Construtor da classe
-        public Pessoa(string nome, string matricula)
+        public Pessoa(string nome, string matricula, string horaEntrada, string horaSaida)
         {
             this.nome = nome;
             this.matricula = matricula;
+            this.horaEntrada = horaEntrada;
+            this.horaSaida = horaSaida;
         }
     }
 }
