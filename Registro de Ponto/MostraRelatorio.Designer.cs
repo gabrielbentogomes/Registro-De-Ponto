@@ -49,6 +49,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.descricao1 = new System.Windows.Forms.Panel();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblNomeFunc = new System.Windows.Forms.Label();
+            this.lblMatricula = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -141,6 +144,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.lblMatricula);
+            this.panel4.Controls.Add(this.lblNomeFunc);
+            this.panel4.Controls.Add(this.lblNome);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
@@ -266,6 +272,32 @@
             this.descricao1.Size = new System.Drawing.Size(776, 28);
             this.descricao1.TabIndex = 3;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(97, 9);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(0, 13);
+            this.lblNome.TabIndex = 9;
+            // 
+            // lblNomeFunc
+            // 
+            this.lblNomeFunc.AutoSize = true;
+            this.lblNomeFunc.Location = new System.Drawing.Point(97, 9);
+            this.lblNomeFunc.Name = "lblNomeFunc";
+            this.lblNomeFunc.Size = new System.Drawing.Size(41, 13);
+            this.lblNomeFunc.TabIndex = 10;
+            this.lblNomeFunc.Text = "label16";
+            // 
+            // lblMatricula
+            // 
+            this.lblMatricula.AutoSize = true;
+            this.lblMatricula.Location = new System.Drawing.Point(97, 34);
+            this.lblMatricula.Name = "lblMatricula";
+            this.lblMatricula.Size = new System.Drawing.Size(41, 13);
+            this.lblMatricula.TabIndex = 11;
+            this.lblMatricula.Text = "label16";
+            // 
             // MostraRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +346,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel descricao1;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblNomeFunc;
+        private System.Windows.Forms.Label lblMatricula;
     }
 }

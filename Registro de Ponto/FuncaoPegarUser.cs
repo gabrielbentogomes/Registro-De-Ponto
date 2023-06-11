@@ -10,31 +10,40 @@ namespace Registro_de_Ponto
 {
     internal class FuncaoPegarUser
     {
-        public string BuscarInformacoesUsuario()
+        public Pessoa BuscarInformacoesUsuario(string matriculaa)
         {
+
             string nome = null;
+            string matricula = null;
 
             using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
             {
                 con.Open();
 
-                string login = "SELECT nome FROM funcionario WHERE matricula = @Matricula";
+                string login = "SELECT nome, matricula FROM funcionario WHERE matricula = @Matricula";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
-                    cmd.Parameters.AddWithValue("@Matricula", Pessoa.Matricula);
+                    cmd.Parameters.AddWithValue("@Matricula", matriculaa);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
+    
                             nome = reader["nome"].ToString();
+                            matricula = reader["matricula"].ToString();
                         }
                     }
                 }
+                
+    
             }
-
-            return nome;
+            Pessoa pessoa = null;
+            pessoa = new Pessoa(nome.ToString(), matricula.ToString());
+            return pessoa;
         }
+
+
 
 
     }

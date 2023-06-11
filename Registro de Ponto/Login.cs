@@ -48,7 +48,7 @@ namespace Registro_de_Ponto
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read()==true)
                 {
-                    Pessoa.Matricula = usuario.Text;
+                    matriculas.Matriculas = usuario.Text;
                     new Inicio_Func().Show();
                     this.Hide();
                 }

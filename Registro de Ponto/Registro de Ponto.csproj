@@ -71,6 +71,7 @@
     <Compile Include="HistoricoFunc.Designer.cs">
       <DependentUpon>HistoricoFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="matriculas.cs" />
     <Compile Include="MostraBanco.cs">
       <SubType>Form</SubType>
     </Compile>

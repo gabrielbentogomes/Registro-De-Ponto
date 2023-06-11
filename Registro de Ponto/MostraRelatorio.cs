@@ -15,6 +15,13 @@ namespace Registro_de_Ponto
         public MostraRelatorio()
         {
             InitializeComponent();
+            mostrarNome();
+        }
+        private void mostrarNome()
+        {
+            FuncaoPegarUser f1 = new FuncaoPegarUser();
+            lblNomeFunc.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
+            lblMatricula.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
         }
     }
 }

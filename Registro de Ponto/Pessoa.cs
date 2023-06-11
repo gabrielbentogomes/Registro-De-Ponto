@@ -4,48 +4,54 @@ namespace Registro_de_Ponto
 {
     internal class Pessoa
     {
-        private static string nome = string.Empty;
-        private static string matricula = string.Empty;
-        private static string senha = string.Empty;
-        private static DateTime horaEntrada;
-        private static DateTime horaSaida;
-        private static string horaTotal = string.Empty;
+        private string nome;
+        private string matricula;
+        private string senha;
+        private DateTime horaEntrada;
+        private DateTime horaSaida;
+        private string horaTotal;
 
-        internal static string Nome
+        internal string Nome
         {
             get { return nome; }
             set { nome = value; }
         }
 
-        internal static string Matricula
+        internal string Matricula
         {
             get { return matricula; }
             set { matricula = value; }
         }
 
-        internal static string Senha
+        internal string Senha
         {
             get { return senha; }
             set { senha = value; }
         }
 
-        internal static DateTime HoraEntrada
+        internal DateTime HoraEntrada
         {
             get { return horaEntrada; }
             set { horaEntrada = value; }
         }
 
-        internal static DateTime HoraSaida
+        internal DateTime HoraSaida
         {
             get { return horaSaida; }
             set { horaSaida = value; }
         }
 
-        internal static string HoraTotal
+        internal string HoraTotal
         {
             get { return horaTotal; }
             set { horaTotal = value; }
         }
-    }
 
+        // Construtor da classe
+        public Pessoa(string nome, string matricula)
+        {
+            this.nome = nome;
+            this.matricula = matricula;
+        }
+    }
 }
