@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,29 +19,16 @@ namespace Registro_de_Ponto
             mostrarNome();
         }
 
+        //VARIÁVEIS
+        private string mes;
+        private string ano;
+
         private void mostrarNome()
         {
             FuncaoPegarUser f1 = new FuncaoPegarUser();
             nomeUsuario.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
 
 
-        }
-        private void btnRegistrarPonto_Click(object sender, EventArgs e)
-        {
-            new Inicio_Func().Show();
-            this.Hide();
-        }
-
-        private void btnHistorico_Click(object sender, EventArgs e)
-        {
-            new HistoricoFunc().Show();
-            this.Hide();
-        }
-
-        private void btnBanco_Click(object sender, EventArgs e)
-        {
-            new Banco().Show();
-            this.Hide();
         }
 
         private void btnSelecionarPeriodo_Click(object sender, EventArgs e)
@@ -51,7 +39,21 @@ namespace Registro_de_Ponto
 
         private void solicitarRelatorio_Click(object sender, EventArgs e)
         {
-            new MostraRelatorio().Show();
+
+            //PEGAR O MÊS E ANO
+            DateTime dataI = DateTime.Parse(dataInicio.Text);
+            DateTime dataF = DateTime.Parse(dataFinal.Text);
+
+            mes = dataI.ToString("MMMM");
+            ano = dataF.ToString("yyyy");
+
+            string ma = mes.ToUpper() + " / " + ano;
+
+            //PEGAR O DIA INICIAL E DIA FINAL
+            string di = dataInicio.Text;
+            string df = dataFinal.Text;
+
+            new MostraRelatorio(ma, di, df).Show();
             this.Close();
         }
     }

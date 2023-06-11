@@ -34,7 +34,11 @@ namespace Registro_de_Ponto
 
         private void solicitarBanco_Click(object sender, EventArgs e)
         {
-            new MostraBanco().Show();
+            //PEGAR O DIA INICIAL E DIA FINAL
+            string di = dataInicio.Text;
+            string df = dataFinal.Text;
+
+            new MostraBanco(di, df).Show();
             this.Close();
         }
     }

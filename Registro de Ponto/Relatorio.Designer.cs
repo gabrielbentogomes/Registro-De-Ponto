@@ -85,12 +85,17 @@
             // 
             // btnSelecionarPeriodo
             // 
+            this.btnSelecionarPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnSelecionarPeriodo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionarPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecionarPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecionarPeriodo.ForeColor = System.Drawing.Color.White;
             this.btnSelecionarPeriodo.Location = new System.Drawing.Point(145, 257);
             this.btnSelecionarPeriodo.Name = "btnSelecionarPeriodo";
-            this.btnSelecionarPeriodo.Size = new System.Drawing.Size(126, 23);
+            this.btnSelecionarPeriodo.Size = new System.Drawing.Size(126, 36);
             this.btnSelecionarPeriodo.TabIndex = 5;
             this.btnSelecionarPeriodo.Text = "Selecionar período";
-            this.btnSelecionarPeriodo.UseVisualStyleBackColor = true;
+            this.btnSelecionarPeriodo.UseVisualStyleBackColor = false;
             this.btnSelecionarPeriodo.Click += new System.EventHandler(this.btnSelecionarPeriodo_Click);
             // 
             // label3
@@ -113,12 +118,17 @@
             // 
             // solicitarRelatorio
             // 
+            this.solicitarRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.solicitarRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.solicitarRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.solicitarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solicitarRelatorio.ForeColor = System.Drawing.Color.White;
             this.solicitarRelatorio.Location = new System.Drawing.Point(145, 381);
             this.solicitarRelatorio.Name = "solicitarRelatorio";
-            this.solicitarRelatorio.Size = new System.Drawing.Size(126, 23);
+            this.solicitarRelatorio.Size = new System.Drawing.Size(126, 36);
             this.solicitarRelatorio.TabIndex = 8;
             this.solicitarRelatorio.Text = "Solicitar";
-            this.solicitarRelatorio.UseVisualStyleBackColor = true;
+            this.solicitarRelatorio.UseVisualStyleBackColor = false;
             this.solicitarRelatorio.Click += new System.EventHandler(this.solicitarRelatorio_Click);
             // 
             // Relatorio

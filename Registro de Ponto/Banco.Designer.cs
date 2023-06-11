@@ -41,12 +41,16 @@
             // 
             // solicitarBanco
             // 
+            this.solicitarBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.solicitarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.solicitarBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solicitarBanco.ForeColor = System.Drawing.Color.White;
             this.solicitarBanco.Location = new System.Drawing.Point(149, 396);
             this.solicitarBanco.Name = "solicitarBanco";
-            this.solicitarBanco.Size = new System.Drawing.Size(126, 23);
+            this.solicitarBanco.Size = new System.Drawing.Size(126, 36);
             this.solicitarBanco.TabIndex = 15;
             this.solicitarBanco.Text = "Solicitar";
-            this.solicitarBanco.UseVisualStyleBackColor = true;
+            this.solicitarBanco.UseVisualStyleBackColor = false;
             this.solicitarBanco.Click += new System.EventHandler(this.solicitarBanco_Click);
             // 
             // nomeUsuario
@@ -59,12 +63,16 @@
             // 
             // btnSelecionarPeriodo
             // 
+            this.btnSelecionarPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnSelecionarPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecionarPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecionarPeriodo.ForeColor = System.Drawing.Color.White;
             this.btnSelecionarPeriodo.Location = new System.Drawing.Point(149, 272);
             this.btnSelecionarPeriodo.Name = "btnSelecionarPeriodo";
-            this.btnSelecionarPeriodo.Size = new System.Drawing.Size(126, 23);
+            this.btnSelecionarPeriodo.Size = new System.Drawing.Size(126, 36);
             this.btnSelecionarPeriodo.TabIndex = 13;
             this.btnSelecionarPeriodo.Text = "Selecionar período";
-            this.btnSelecionarPeriodo.UseVisualStyleBackColor = true;
+            this.btnSelecionarPeriodo.UseVisualStyleBackColor = false;
             this.btnSelecionarPeriodo.Click += new System.EventHandler(this.btnSelecionarPeriodo_Click);
             // 
             // monthCalendar1

@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastroAdmin = new System.Windows.Forms.Button();
-            this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnBanco = new System.Windows.Forms.Button();
             this.btntratarPonto = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -56,13 +55,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCadastroAdmin);
-            this.panel1.Controls.Add(this.btnRelatorio);
             this.panel1.Controls.Add(this.btnBanco);
             this.panel1.Controls.Add(this.btntratarPonto);
             this.panel1.Controls.Add(this.btnCadastro);
             this.panel1.Location = new System.Drawing.Point(209, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 250);
+            this.panel1.Size = new System.Drawing.Size(357, 214);
             this.panel1.TabIndex = 5;
             // 
             // btnCadastroAdmin
@@ -79,25 +77,12 @@
             this.btnCadastroAdmin.UseVisualStyleBackColor = false;
             this.btnCadastroAdmin.Click += new System.EventHandler(this.btnCadastroAdmin_Click);
             // 
-            // btnRelatorio
-            // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(38, 147);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(294, 34);
-            this.btnRelatorio.TabIndex = 6;
-            this.btnRelatorio.Text = "Relatório espelho de ponto";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
-            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
-            // 
             // btnBanco
             // 
             this.btnBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.ForeColor = System.Drawing.Color.White;
-            this.btnBanco.Location = new System.Drawing.Point(38, 187);
+            this.btnBanco.Location = new System.Drawing.Point(38, 147);
             this.btnBanco.Name = "btnBanco";
             this.btnBanco.Size = new System.Drawing.Size(294, 34);
             this.btnBanco.TabIndex = 5;
@@ -192,7 +177,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnBanco;
         private System.Windows.Forms.Button btntratarPonto;
         private System.Windows.Forms.Button btnCadastro;
