@@ -19,6 +19,7 @@ namespace Registro_de_Ponto
         }
         private void mostrarNome()
         {
+            
             FuncaoPegarUser f1 = new FuncaoPegarUser();
             lblNomeFunc.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
             lblMatricula.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
