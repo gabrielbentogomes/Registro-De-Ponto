@@ -17,11 +17,6 @@ namespace Registro_de_Ponto
             InitializeComponent();
         }
 
-        private void btnRelatorio_Click(object sender, EventArgs e)
-        {
-            new Relatorio().Show();
-        }
-
         private void btnBanco_Click(object sender, EventArgs e)
         {
             new Banco().Show();

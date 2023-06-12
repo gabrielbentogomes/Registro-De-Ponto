@@ -43,6 +43,10 @@ namespace Registro_de_Ponto
             this.Close();
         }
 
+        private void dataHora_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
