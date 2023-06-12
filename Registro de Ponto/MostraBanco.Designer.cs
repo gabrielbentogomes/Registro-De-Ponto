@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHoras = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -43,12 +44,14 @@
             this.periodo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelHoras = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblNomeFunc = new System.Windows.Forms.Label();
+            this.lblMatricula = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panelHoras.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelHoras.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +63,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 1346);
             this.panel1.TabIndex = 0;
+            // 
+            // panelHoras
+            // 
+            this.panelHoras.Controls.Add(this.panel5);
+            this.panelHoras.Location = new System.Drawing.Point(187, 194);
+            this.panelHoras.Name = "panelHoras";
+            this.panelHoras.Size = new System.Drawing.Size(418, 1140);
+            this.panelHoras.TabIndex = 5;
             // 
             // panel5
             // 
@@ -117,6 +128,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.panel3.Controls.Add(this.lblMatricula);
+            this.panel3.Controls.Add(this.lblNomeFunc);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label7);
@@ -209,13 +222,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Saldo no Banco de horas";
             // 
-            // panelHoras
+            // label5
             // 
-            this.panelHoras.Controls.Add(this.panel5);
-            this.panelHoras.Location = new System.Drawing.Point(187, 194);
-            this.panelHoras.Name = "panelHoras";
-            this.panelHoras.Size = new System.Drawing.Size(418, 1140);
-            this.panelHoras.TabIndex = 5;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "label5";
+            // 
+            // lblNomeFunc
+            // 
+            this.lblNomeFunc.AutoSize = true;
+            this.lblNomeFunc.Location = new System.Drawing.Point(110, 12);
+            this.lblNomeFunc.Name = "lblNomeFunc";
+            this.lblNomeFunc.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeFunc.TabIndex = 12;
+            this.lblNomeFunc.Text = "label6";
+            // 
+            // lblMatricula
+            // 
+            this.lblMatricula.AutoSize = true;
+            this.lblMatricula.Location = new System.Drawing.Point(110, 44);
+            this.lblMatricula.Name = "lblMatricula";
+            this.lblMatricula.Size = new System.Drawing.Size(35, 13);
+            this.lblMatricula.TabIndex = 13;
+            this.lblMatricula.Text = "label6";
             // 
             // MostraBanco
             // 
@@ -223,19 +255,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MostraBanco";
             this.Text = "MostraBanco";
             this.panel1.ResumeLayout(false);
+            this.panelHoras.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelHoras.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -257,5 +291,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelHoras;
+        private System.Windows.Forms.Label lblNomeFunc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblMatricula;
     }
 }

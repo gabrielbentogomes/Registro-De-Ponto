@@ -19,13 +19,21 @@ namespace Registro_de_Ponto
         public MostraBanco(string di, string df)
         {
             InitializeComponent();
+            mostrarNome();
             this.di = di;
             this.df = df;
 
             MostraPeriodo();
             MostrarData();
         }
+        private void mostrarNome()
+        {
 
+            FuncaoPegarUser f1 = new FuncaoPegarUser();
+            lblNomeFunc.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
+            lblMatricula.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
+
+        }
         private void MostraPeriodo()
         {
             periodo.Text = di + " a " + df;   
