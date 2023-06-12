@@ -25,7 +25,7 @@ namespace Registro_de_Ponto
 
         private void btnBanco_Click(object sender, EventArgs e)
         {
-            new Banco().Show(); 
+            new BancoFunc().Show(); 
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Registro_de_Ponto
 {
-    partial class MostraBanco
+    partial class MostraBancoFunc
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblMatricula = new System.Windows.Forms.Label();
+            this.lblNomeFunc = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblNomeFunc = new System.Windows.Forms.Label();
-            this.lblMatricula = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelHoras.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -140,6 +140,24 @@
             this.panel3.Size = new System.Drawing.Size(776, 67);
             this.panel3.TabIndex = 3;
             // 
+            // lblMatricula
+            // 
+            this.lblMatricula.AutoSize = true;
+            this.lblMatricula.Location = new System.Drawing.Point(110, 44);
+            this.lblMatricula.Name = "lblMatricula";
+            this.lblMatricula.Size = new System.Drawing.Size(35, 13);
+            this.lblMatricula.TabIndex = 13;
+            this.lblMatricula.Text = "label6";
+            // 
+            // lblNomeFunc
+            // 
+            this.lblNomeFunc.AutoSize = true;
+            this.lblNomeFunc.Location = new System.Drawing.Point(110, 12);
+            this.lblNomeFunc.Name = "lblNomeFunc";
+            this.lblNomeFunc.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeFunc.TabIndex = 12;
+            this.lblNomeFunc.Text = "label6";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -231,35 +249,17 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "label5";
             // 
-            // lblNomeFunc
-            // 
-            this.lblNomeFunc.AutoSize = true;
-            this.lblNomeFunc.Location = new System.Drawing.Point(110, 12);
-            this.lblNomeFunc.Name = "lblNomeFunc";
-            this.lblNomeFunc.Size = new System.Drawing.Size(35, 13);
-            this.lblNomeFunc.TabIndex = 12;
-            this.lblNomeFunc.Text = "label6";
-            // 
-            // lblMatricula
-            // 
-            this.lblMatricula.AutoSize = true;
-            this.lblMatricula.Location = new System.Drawing.Point(110, 44);
-            this.lblMatricula.Name = "lblMatricula";
-            this.lblMatricula.Size = new System.Drawing.Size(35, 13);
-            this.lblMatricula.TabIndex = 13;
-            this.lblMatricula.Text = "label6";
-            // 
-            // MostraBanco
+            // MostraBancoFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(812, 450);
+            this.ClientSize = new System.Drawing.Size(829, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "MostraBanco";
-            this.Text = "MostraBanco";
+            this.Name = "MostraBancoFunc";
+            this.Text = "Banco de horas";
             this.panel1.ResumeLayout(false);
             this.panelHoras.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

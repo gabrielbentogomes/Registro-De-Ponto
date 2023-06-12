@@ -132,11 +132,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
-    <Compile Include="Banco.cs">
+    <Compile Include="BancoAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Banco.Designer.cs">
-      <DependentUpon>Banco.cs</DependentUpon>
+    <Compile Include="BancoAdmin.Designer.cs">
+      <DependentUpon>BancoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BancoFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BancoFunc.Designer.cs">
+      <DependentUpon>BancoFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroAdmin.cs">
       <SubType>Form</SubType>
@@ -157,11 +163,17 @@
       <DependentUpon>HistoricoFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="matriculas.cs" />
-    <Compile Include="MostraBanco.cs">
+    <Compile Include="MostraBancoFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MostraBanco.Designer.cs">
-      <DependentUpon>MostraBanco.cs</DependentUpon>
+    <Compile Include="MostraBancoFunc.Designer.cs">
+      <DependentUpon>MostraBancoFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarBancoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarBancoAdmin.Designer.cs">
+      <DependentUpon>MostrarBancoAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="TratarPonto.cs">
       <SubType>Form</SubType>
@@ -169,11 +181,11 @@
     <Compile Include="TratarPonto.Designer.cs">
       <DependentUpon>TratarPonto.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioSuper.cs">
+    <Compile Include="InicioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSuper.Designer.cs">
-      <DependentUpon>InicioSuper.cs</DependentUpon>
+    <Compile Include="InicioAdmin.Designer.cs">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -226,8 +238,11 @@
     <Compile Include="Senha.Designer.cs">
       <DependentUpon>Senha.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Banco.resx">
-      <DependentUpon>Banco.cs</DependentUpon>
+    <EmbeddedResource Include="BancoAdmin.resx">
+      <DependentUpon>BancoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BancoFunc.resx">
+      <DependentUpon>BancoFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroAdmin.resx">
       <DependentUpon>CadastroAdmin.cs</DependentUpon>
@@ -235,14 +250,17 @@
     <EmbeddedResource Include="HistoricoFunc.resx">
       <DependentUpon>HistoricoFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MostraBanco.resx">
-      <DependentUpon>MostraBanco.cs</DependentUpon>
+    <EmbeddedResource Include="MostraBancoFunc.resx">
+      <DependentUpon>MostraBancoFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarBancoAdmin.resx">
+      <DependentUpon>MostrarBancoAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TratarPonto.resx">
       <DependentUpon>TratarPonto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioSuper.resx">
-      <DependentUpon>InicioSuper.cs</DependentUpon>
+    <EmbeddedResource Include="InicioAdmin.resx">
+      <DependentUpon>InicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

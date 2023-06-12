@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class Banco : Form
+    public partial class BancoAdmin : Form
     {
-        public Banco()
+        public BancoAdmin()
         {
             InitializeComponent();
-            mostrarNome();
         }
 
         private void btnSelecionarPeriodo_Click(object sender, EventArgs e)
@@ -24,22 +23,14 @@ namespace Registro_de_Ponto
             dataFinal.Text = monthCalendar1.SelectionEnd.ToShortDateString();
         }
 
-        private void mostrarNome()
-        {
-            FuncaoPegarUser f1 = new FuncaoPegarUser();
-            nomeUsuario.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
-
-
-        }
-
         private void solicitarBanco_Click(object sender, EventArgs e)
         {
-            //PEGAR O DIA INICIAL E DIA FINAL
-            string di = dataInicio.Text;
-            string df = dataFinal.Text;
+                //PEGAR O DIA INICIAL E DIA FINAL
+                string di = dataInicio.Text;
+                string df = dataFinal.Text;
 
-            new MostraBanco(di, df).Show();
-            this.Close();
+                new MostrarBancoAdmin(di, df).Show();
+                this.Close(); 
         }
     }
 }

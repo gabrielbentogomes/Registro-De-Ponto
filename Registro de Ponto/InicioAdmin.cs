@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class Inicio_Super : Form
+    public partial class Inicio_Admin : Form
     {
-        public Inicio_Super()
+        public Inicio_Admin()
         {
             InitializeComponent();
         }
 
         private void btnBanco_Click(object sender, EventArgs e)
         {
-            new Banco().Show();
+            new BancoAdmin().Show();
         }
 
         private void btntratarPonto_Click(object sender, EventArgs e)

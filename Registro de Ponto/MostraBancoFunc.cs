@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Registro_de_Ponto
 {
-    public partial class MostraBanco : Form
+    public partial class MostraBancoFunc : Form
     {
 
         private string di;
         private string df;
 
-        public MostraBanco(string di, string df)
+        public MostraBancoFunc(string di, string df)
         {
             InitializeComponent();
             mostrarNome();

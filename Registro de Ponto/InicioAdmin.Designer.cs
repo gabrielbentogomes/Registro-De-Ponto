@@ -1,6 +1,6 @@
 ﻿namespace Registro_de_Ponto
 {
-    partial class Inicio_Super
+    partial class Inicio_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -154,7 +154,7 @@
             this.btnControleJornada.Size = new System.Drawing.Size(143, 21);
             this.btnControleJornada.Text = "Controle de Jornada";
             // 
-            // Inicio_Super
+            // Inicio_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Inicio_Super";
+            this.Name = "Inicio_Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Início";
             this.panel1.ResumeLayout(false);
