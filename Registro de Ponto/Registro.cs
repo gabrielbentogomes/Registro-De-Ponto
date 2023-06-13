@@ -23,8 +23,10 @@ namespace Registro_de_Ponto
 
         private void ExibirDataAtual()
         {
+
             dataHora.Text = DateTime.Now.ToString();
             dataHora.ReadOnly = true;
+
         }
         private void mostrarNome()
         {
