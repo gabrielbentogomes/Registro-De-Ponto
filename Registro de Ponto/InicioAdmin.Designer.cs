@@ -1,6 +1,6 @@
 ﻿namespace Registro_de_Ponto
 {
-    partial class Inicio_Super
+    partial class Inicio_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnCadastroAdmin = new System.Windows.Forms.Button();
             this.btnBanco = new System.Windows.Forms.Button();
             this.btntratarPonto = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -54,34 +54,35 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnRelatorio);
+            this.panel1.Controls.Add(this.btnCadastroAdmin);
             this.panel1.Controls.Add(this.btnBanco);
             this.panel1.Controls.Add(this.btntratarPonto);
             this.panel1.Controls.Add(this.btnCadastro);
             this.panel1.Location = new System.Drawing.Point(209, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 198);
+            this.panel1.Size = new System.Drawing.Size(357, 214);
             this.panel1.TabIndex = 5;
             // 
-            // btnRelatorio
+            // btnCadastroAdmin
             // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(32, 96);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(294, 34);
-            this.btnRelatorio.TabIndex = 6;
-            this.btnRelatorio.Text = "Relatório espelho de ponto";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
-            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            this.btnCadastroAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
+            this.btnCadastroAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCadastroAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnCadastroAdmin.Location = new System.Drawing.Point(38, 27);
+            this.btnCadastroAdmin.Name = "btnCadastroAdmin";
+            this.btnCadastroAdmin.Size = new System.Drawing.Size(294, 34);
+            this.btnCadastroAdmin.TabIndex = 7;
+            this.btnCadastroAdmin.Text = "Cadastrar administrador";
+            this.btnCadastroAdmin.UseVisualStyleBackColor = false;
+            this.btnCadastroAdmin.Click += new System.EventHandler(this.btnCadastroAdmin_Click);
             // 
             // btnBanco
             // 
             this.btnBanco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.ForeColor = System.Drawing.Color.White;
-            this.btnBanco.Location = new System.Drawing.Point(32, 136);
+            this.btnBanco.Location = new System.Drawing.Point(38, 147);
             this.btnBanco.Name = "btnBanco";
             this.btnBanco.Size = new System.Drawing.Size(294, 34);
             this.btnBanco.TabIndex = 5;
@@ -94,7 +95,7 @@
             this.btntratarPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.btntratarPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntratarPonto.ForeColor = System.Drawing.Color.White;
-            this.btntratarPonto.Location = new System.Drawing.Point(32, 56);
+            this.btntratarPonto.Location = new System.Drawing.Point(38, 107);
             this.btntratarPonto.Name = "btntratarPonto";
             this.btntratarPonto.Size = new System.Drawing.Size(294, 34);
             this.btntratarPonto.TabIndex = 4;
@@ -108,7 +109,7 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnCadastro.Location = new System.Drawing.Point(32, 16);
+            this.btnCadastro.Location = new System.Drawing.Point(38, 67);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(294, 34);
             this.btnCadastro.TabIndex = 3;
@@ -135,6 +136,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(42, 21);
             this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnPerfil
             // 
@@ -142,6 +144,7 @@
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(119, 21);
             this.btnPerfil.Text = "Perfil do usuário";
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnControleJornada
             // 
@@ -151,7 +154,7 @@
             this.btnControleJornada.Size = new System.Drawing.Size(143, 21);
             this.btnControleJornada.Text = "Controle de Jornada";
             // 
-            // Inicio_Super
+            // Inicio_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +162,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Inicio_Super";
+            this.Name = "Inicio_Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Início";
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -173,7 +177,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnBanco;
         private System.Windows.Forms.Button btntratarPonto;
         private System.Windows.Forms.Button btnCadastro;
@@ -181,5 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnSair;
         private System.Windows.Forms.ToolStripMenuItem btnPerfil;
         private System.Windows.Forms.ToolStripMenuItem btnControleJornada;
+        private System.Windows.Forms.Button btnCadastroAdmin;
     }
 }

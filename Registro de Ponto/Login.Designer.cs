@@ -33,7 +33,7 @@
             this.mostraSenha = new System.Windows.Forms.CheckBox();
             this.loginEntrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioSuper = new System.Windows.Forms.RadioButton();
+            this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.radioFunc = new System.Windows.Forms.RadioButton();
             this.senha = new System.Windows.Forms.TextBox();
             this.usuario = new System.Windows.Forms.TextBox();
@@ -95,7 +95,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioSuper);
+            this.groupBox1.Controls.Add(this.radioAdmin);
             this.groupBox1.Controls.Add(this.radioFunc);
             this.groupBox1.Location = new System.Drawing.Point(33, 83);
             this.groupBox1.Name = "groupBox1";
@@ -103,17 +103,17 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // radioSuper
+            // radioAdmin
             // 
-            this.radioSuper.AutoSize = true;
-            this.radioSuper.ForeColor = System.Drawing.Color.White;
-            this.radioSuper.Location = new System.Drawing.Point(132, 20);
-            this.radioSuper.Name = "radioSuper";
-            this.radioSuper.Size = new System.Drawing.Size(75, 17);
-            this.radioSuper.TabIndex = 1;
-            this.radioSuper.TabStop = true;
-            this.radioSuper.Text = "Supervisor";
-            this.radioSuper.UseVisualStyleBackColor = true;
+            this.radioAdmin.AutoSize = true;
+            this.radioAdmin.ForeColor = System.Drawing.Color.White;
+            this.radioAdmin.Location = new System.Drawing.Point(132, 20);
+            this.radioAdmin.Name = "radioAdmin";
+            this.radioAdmin.Size = new System.Drawing.Size(88, 17);
+            this.radioAdmin.TabIndex = 1;
+            this.radioAdmin.TabStop = true;
+            this.radioAdmin.Text = "Administrador";
+            this.radioAdmin.UseVisualStyleBackColor = true;
             // 
             // radioFunc
             // 
@@ -190,7 +190,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioSuper;
+        private System.Windows.Forms.RadioButton radioAdmin;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioFunc;
         private System.Windows.Forms.TextBox senha;

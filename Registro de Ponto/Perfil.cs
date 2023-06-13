@@ -20,7 +20,7 @@ namespace Registro_de_Ponto
         private void mostrarNome()
         {
             FuncaoPegarUser f1 = new FuncaoPegarUser();
-            nomeUsuario.Text = f1.BuscarInformacoesUsuario();
+            nomeUsuario.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome;
 
         }
         private void btnSair_Click(object sender, EventArgs e)

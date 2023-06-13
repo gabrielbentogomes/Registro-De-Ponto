@@ -7,25 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Registro_de_Ponto
 {
-    public partial class Inicio_Func : Form
+    public partial class Inicio_Admin : Form
     {
-        public Inicio_Func()
+        public Inicio_Admin()
         {
             InitializeComponent();
         }
 
-        private void btnHistorico_Click(object sender, EventArgs e)
-        {
-            new HistoricoFunc().Show();
-        }
-
         private void btnBanco_Click(object sender, EventArgs e)
         {
-            new BancoFunc().Show(); 
+            new BancoAdmin().Show();
+        }
+
+        private void btntratarPonto_Click(object sender, EventArgs e)
+        {
+            new TratarPonto().Show();
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            new CadastroFunc().Show();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -40,14 +44,9 @@ namespace Registro_de_Ponto
             this.Close();
         }
 
-        private void btnRegistrarPonto_Click(object sender, EventArgs e)
+        private void btnCadastroAdmin_Click(object sender, EventArgs e)
         {
-            new Registro().Show();
-        }
-
-        private void btnRelatorio_Click(object sender, EventArgs e)
-        {
-            new Relatorio().Show();
+            new CadastroAdmin().Show();
         }
     }
 }

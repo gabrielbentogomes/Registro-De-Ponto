@@ -43,12 +43,12 @@ namespace Registro_de_Ponto
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
-                string login = "SELECT * FROM user_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                string login = "SELECT * FROM funcionario WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read()==true)
                 {
-                    Pessoa.Nome = usuario.Text;
+                    matriculas.Matriculas = usuario.Text;
                     new Inicio_Func().Show();
                     this.Hide();
                 }
@@ -57,7 +57,7 @@ namespace Registro_de_Ponto
                     MessageBox.Show("Senha ou usuário incorretos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if(radioSuper.Checked)
+            else if(radioAdmin.Checked)
             {
 
                 SqlConnection con = new SqlConnection();
@@ -65,14 +65,15 @@ namespace Registro_de_Ponto
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
-                string login = "SELECT * FROM super_tb WHERE usuario='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                string login = "SELECT * FROM Administrador WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
 
                 if (dr.Read()==true)
                 {
-                    new Inicio_Super().Show();
+                    Administrador.Matricula = usuario.Text;
+                    new Inicio_Admin().Show();
                     this.Hide();
                 }
                 else
