@@ -39,7 +39,7 @@
             // 
             // novaSenha
             // 
-            this.novaSenha.Location = new System.Drawing.Point(157, 40);
+            this.novaSenha.Location = new System.Drawing.Point(137, 31);
             this.novaSenha.Name = "novaSenha";
             this.novaSenha.PasswordChar = '*';
             this.novaSenha.Size = new System.Drawing.Size(199, 20);
@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 43);
+            this.label1.Location = new System.Drawing.Point(63, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 1;
@@ -57,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 91);
+            this.label2.Location = new System.Drawing.Point(39, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // cNovaSenha
             // 
-            this.cNovaSenha.Location = new System.Drawing.Point(157, 87);
+            this.cNovaSenha.Location = new System.Drawing.Point(137, 78);
             this.cNovaSenha.Name = "cNovaSenha";
             this.cNovaSenha.PasswordChar = '*';
             this.cNovaSenha.Size = new System.Drawing.Size(199, 20);
@@ -76,7 +76,7 @@
             this.confirmaSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.confirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.confirmaSenha.ForeColor = System.Drawing.Color.White;
-            this.confirmaSenha.Location = new System.Drawing.Point(121, 152);
+            this.confirmaSenha.Location = new System.Drawing.Point(101, 143);
             this.confirmaSenha.Name = "confirmaSenha";
             this.confirmaSenha.Size = new System.Drawing.Size(102, 36);
             this.confirmaSenha.TabIndex = 4;
@@ -89,7 +89,7 @@
             this.cancelarSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.cancelarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.cancelarSenha.ForeColor = System.Drawing.Color.White;
-            this.cancelarSenha.Location = new System.Drawing.Point(271, 152);
+            this.cancelarSenha.Location = new System.Drawing.Point(251, 143);
             this.cancelarSenha.Name = "cancelarSenha";
             this.cancelarSenha.Size = new System.Drawing.Size(102, 36);
             this.cancelarSenha.TabIndex = 5;
@@ -102,7 +102,7 @@
             this.mostraSenha.AutoSize = true;
             this.mostraSenha.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.mostraSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
-            this.mostraSenha.Location = new System.Drawing.Point(362, 87);
+            this.mostraSenha.Location = new System.Drawing.Point(342, 78);
             this.mostraSenha.Name = "mostraSenha";
             this.mostraSenha.Size = new System.Drawing.Size(101, 19);
             this.mostraSenha.TabIndex = 11;

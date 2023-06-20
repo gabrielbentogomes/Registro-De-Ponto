@@ -175,6 +175,18 @@
     <Compile Include="MostrarBancoAdmin.Designer.cs">
       <DependentUpon>MostrarBancoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="PerfilAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilAdmin.Designer.cs">
+      <DependentUpon>PerfilAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SenhaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SenhaAdmin.Designer.cs">
+      <DependentUpon>SenhaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="TratarPonto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarBancoAdmin.resx">
       <DependentUpon>MostrarBancoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilAdmin.resx">
+      <DependentUpon>PerfilAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SenhaAdmin.resx">
+      <DependentUpon>SenhaAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TratarPonto.resx">
       <DependentUpon>TratarPonto.cs</DependentUpon>

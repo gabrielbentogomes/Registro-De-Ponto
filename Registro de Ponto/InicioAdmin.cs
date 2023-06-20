@@ -34,7 +34,7 @@ namespace Registro_de_Ponto
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            new Perfil().Show();
+            new PerfilAdmin().Show();
             this.Close();
         }
 
