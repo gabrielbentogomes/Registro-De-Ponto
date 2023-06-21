@@ -15,9 +15,15 @@ namespace Registro_de_Ponto
         public PerfilAdmin()
         {
             InitializeComponent();
+            mostrarNome();
             
         }
+        private void mostrarNome()
+        {
+            FuncaoPegarAdmin f1 = new FuncaoPegarAdmin();
+            nomeUsuarioAdmin.Text = f1.BuscarInformacoesAdmin(matriculas.Matriculas).Nome;
 
+        }
         private void btnControleJornada_Click(object sender, EventArgs e)
         {
             new Inicio_Admin().Show();

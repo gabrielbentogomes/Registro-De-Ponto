@@ -72,7 +72,7 @@ namespace Registro_de_Ponto
 
                 if (dr.Read()==true)
                 {
-                    Administrador.Matricula = usuario.Text;
+                    matriculas.Matriculas = usuario.Text;
                     new Inicio_Admin().Show();
                     this.Hide();
                 }
