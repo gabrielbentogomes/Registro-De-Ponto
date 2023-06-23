@@ -38,7 +38,7 @@ namespace Registro_de_Ponto
                 con.ConnectionString = "Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!";
                 con.Open();
 
-                string insertQuery = "INSERT INTO Administrador VALUES (@Nome, @Matricula, @Senha)";
+                string insertQuery = "INSERT INTO Admin VALUES (@Nome, @Matricula, @Senha)";
 
                 using (SqlCommand cmd = new SqlCommand(insertQuery, con))
                 {

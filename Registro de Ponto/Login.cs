@@ -65,7 +65,7 @@ namespace Registro_de_Ponto
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
-                string login = "SELECT * FROM Administrador WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
+                string login = "SELECT * FROM Admin WHERE matricula='" + usuario.Text + "'and senha ='" + senha.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 

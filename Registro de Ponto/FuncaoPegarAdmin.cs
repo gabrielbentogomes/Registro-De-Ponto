@@ -21,7 +21,7 @@ namespace Registro_de_Ponto
             {
                 con.Open();
 
-                string login = "SELECT nomecompleto, matricula FROM Administrador WHERE matricula = @Matricula";
+                string login = "SELECT nomeCompleto, matricula FROM Admin WHERE matricula = @Matricula";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);

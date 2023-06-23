@@ -22,7 +22,7 @@ namespace Registro_de_Ponto
             {
                 con.Open();
 
-                string login = "SELECT nome, matricula, horaEntrada, horaSaida FROM funcionario WHERE matricula = @Matricula";
+                string login = "SELECT nomeCompleto, matricula, horarioEntrada, horarioSaida FROM Funcionario WHERE matricula = @Matricula";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);
@@ -32,17 +32,17 @@ namespace Registro_de_Ponto
                         if (reader.Read())
                         {
     
-                            nome = reader["nome"].ToString();
+                            nome = reader["nomeCompleto"].ToString();
                             matricula = reader["matricula"].ToString();
-                            if (reader["horaEntrada"] != DBNull.Value)
+                            if (reader["horarioEntrada"] != DBNull.Value)
                             {
-                                TimeSpan horaEntradaDb = (TimeSpan)reader["horaEntrada"];
+                                TimeSpan horaEntradaDb = (TimeSpan)reader["horarioEntrada"];
                                 horaEntrada = horaEntradaDb.ToString();
                             }
 
-                            if (reader["horaSaida"] != DBNull.Value)
+                            if (reader["horarioSaida"] != DBNull.Value)
                             {
-                                TimeSpan horaSaidaDb = (TimeSpan)reader["horaSaida"];
+                                TimeSpan horaSaidaDb = (TimeSpan)reader["horarioSaida"];
                                 horaSaida = horaSaidaDb.ToString();
                             }
 
