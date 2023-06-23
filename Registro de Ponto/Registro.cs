@@ -24,7 +24,14 @@ namespace Registro_de_Ponto
         private void ExibirDataAtual()
         {
 
-            dataHora.Text = DateTime.Now.ToString();
+            DateTime dtaHora = DateTime.Now;
+
+            // Obtendo as partes individuais
+            string data = dtaHora.ToString("dd/MM/yyyy");
+            string hora = dtaHora.ToString("HH:mm");
+
+            // Exibindo a string no formulário ou onde for necessário
+            dataHora.Text = data + "  " + hora;
             dataHora.ReadOnly = true;
 
         }
