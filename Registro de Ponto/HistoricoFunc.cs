@@ -1,7 +1,9 @@
-﻿using System;
+﻿using iText.StyledXmlParser.Jsoup.Nodes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -14,15 +16,16 @@ namespace Registro_de_Ponto
 {
     public partial class HistoricoFunc : Form
     {
+        FuncaoPegarUser f1 = new FuncaoPegarUser();
         public HistoricoFunc()
         {
             InitializeComponent();
             mostrarNome();
             mostrarDataeDia();
+            carregarDados(f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula);
         }
         private void mostrarNome()
         {
-            FuncaoPegarUser f1 = new FuncaoPegarUser();
             nomeUsuario.Text = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Nome; ;
         }
 
@@ -33,5 +36,40 @@ namespace Registro_de_Ponto
             CultureInfo cultura = new CultureInfo("pt-BR");
             diaSemanaH.Text = DateTime.Now.ToString("dddd", cultura);
         }
+
+        private void carregarDados(string matriculaa)
+        {
+            string horarioEntrada = null;
+            string horarioSaida = null;
+            using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
+            {
+                con.Open();
+
+                string login = "SELECT f.matricula, f.nomeCompleto, COALESCE(e.horarioEntrada, NULL) AS horarioEntrada, COALESCE(s.horarioSaida, NULL) AS horarioSaida\r\nFROM Funcionario f\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioEntrada\r\n  FROM Entrada\r\n  WHERE CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) e ON f.matricula = e.matriculaFunc\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioSaida\r\n  FROM Saida\r\n  WHERE CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) s ON f.matricula = s.matriculaFunc\r\nWHERE f.matricula = @Matricula;\r\n";
+                using (SqlCommand cmd = new SqlCommand(login, con))
+                {
+                    cmd.Parameters.AddWithValue("@Matricula", matriculaa);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            horarioEntrada = reader["horarioEntrada"].ToString();
+                            horarioSaida = reader["horarioSaida"].ToString();
+
+                        }
+
+
+                    }
+                }
+    
+                txtEntrada.Text = horarioEntrada;
+                txtSaida.Text = horarioSaida;
+               
+            }
+
+        }
+        
     }
 }
+

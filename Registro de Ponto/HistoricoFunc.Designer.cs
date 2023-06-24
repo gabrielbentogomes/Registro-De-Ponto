@@ -36,10 +36,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox224 = new System.Windows.Forms.TextBox();
+            this.txtTempoDecorrido = new System.Windows.Forms.TextBox();
             this.textBox233 = new System.Windows.Forms.TextBox();
-            this.textBox239 = new System.Windows.Forms.TextBox();
-            this.textBox240 = new System.Windows.Forms.TextBox();
+            this.txtSaida = new System.Windows.Forms.TextBox();
+            this.txtEntrada = new System.Windows.Forms.TextBox();
             this.panel26 = new System.Windows.Forms.Panel();
             this.diaSemanaH = new System.Windows.Forms.Label();
             this.dataH = new System.Windows.Forms.Label();
@@ -127,24 +127,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox224);
+            this.panel1.Controls.Add(this.txtTempoDecorrido);
             this.panel1.Controls.Add(this.textBox233);
-            this.panel1.Controls.Add(this.textBox239);
-            this.panel1.Controls.Add(this.textBox240);
+            this.panel1.Controls.Add(this.txtSaida);
+            this.panel1.Controls.Add(this.txtEntrada);
             this.panel1.Controls.Add(this.panel26);
             this.panel1.Location = new System.Drawing.Point(93, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(491, 58);
             this.panel1.TabIndex = 25;
             // 
-            // textBox224
+            // txtTempoDecorrido
             // 
-            this.textBox224.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox224.Location = new System.Drawing.Point(425, 28);
-            this.textBox224.Name = "textBox224";
-            this.textBox224.ReadOnly = true;
-            this.textBox224.Size = new System.Drawing.Size(57, 20);
-            this.textBox224.TabIndex = 257;
+            this.txtTempoDecorrido.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTempoDecorrido.Location = new System.Drawing.Point(425, 28);
+            this.txtTempoDecorrido.Name = "txtTempoDecorrido";
+            this.txtTempoDecorrido.ReadOnly = true;
+            this.txtTempoDecorrido.Size = new System.Drawing.Size(57, 20);
+            this.txtTempoDecorrido.TabIndex = 257;
             // 
             // textBox233
             // 
@@ -155,23 +155,23 @@
             this.textBox233.Size = new System.Drawing.Size(120, 20);
             this.textBox233.TabIndex = 253;
             // 
-            // textBox239
+            // txtSaida
             // 
-            this.textBox239.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox239.Location = new System.Drawing.Point(128, 28);
-            this.textBox239.Name = "textBox239";
-            this.textBox239.ReadOnly = true;
-            this.textBox239.Size = new System.Drawing.Size(85, 20);
-            this.textBox239.TabIndex = 250;
+            this.txtSaida.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtSaida.Location = new System.Drawing.Point(128, 28);
+            this.txtSaida.Name = "txtSaida";
+            this.txtSaida.ReadOnly = true;
+            this.txtSaida.Size = new System.Drawing.Size(85, 20);
+            this.txtSaida.TabIndex = 250;
             // 
-            // textBox240
+            // txtEntrada
             // 
-            this.textBox240.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox240.Location = new System.Drawing.Point(7, 28);
-            this.textBox240.Name = "textBox240";
-            this.textBox240.ReadOnly = true;
-            this.textBox240.Size = new System.Drawing.Size(85, 20);
-            this.textBox240.TabIndex = 249;
+            this.txtEntrada.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtEntrada.Location = new System.Drawing.Point(7, 28);
+            this.txtEntrada.Name = "txtEntrada";
+            this.txtEntrada.ReadOnly = true;
+            this.txtEntrada.Size = new System.Drawing.Size(85, 20);
+            this.txtEntrada.TabIndex = 249;
             // 
             // panel26
             // 
@@ -237,10 +237,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox224;
+        private System.Windows.Forms.TextBox txtTempoDecorrido;
         private System.Windows.Forms.TextBox textBox233;
-        private System.Windows.Forms.TextBox textBox239;
-        private System.Windows.Forms.TextBox textBox240;
+        private System.Windows.Forms.TextBox txtSaida;
+        private System.Windows.Forms.TextBox txtEntrada;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label diaSemanaH;
         private System.Windows.Forms.Label dataH;

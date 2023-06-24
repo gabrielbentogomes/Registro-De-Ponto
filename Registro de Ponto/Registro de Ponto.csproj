@@ -150,6 +150,7 @@
     <Compile Include="CadastroAdmin.Designer.cs">
       <DependentUpon>CadastroAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncaoCarregarDados.cs" />
     <Compile Include="FuncaoPegarAdmin.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
