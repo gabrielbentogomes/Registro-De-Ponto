@@ -42,6 +42,7 @@ namespace Registro_de_Ponto
 
                 }
                 MessageBox.Show("Senha alterada com sucesso!", "Mensagem", MessageBoxButtons.OK);
+                this.Close();
 
             }
             else
