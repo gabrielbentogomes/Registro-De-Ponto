@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -100,7 +101,7 @@ namespace Registro_de_Ponto
             for (DateTime data = dataInicio; data <= dataFinal; data = data.AddDays(1))
             {
                 FuncaoPegarUser f1 = new FuncaoPegarUser();
-
+                string statusHora = null;
                 string matriculaa = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
                 string dataFormatada = data.ToString("dd/MM/yyyy");
                 string horarioEntrada = null;
@@ -185,11 +186,44 @@ namespace Registro_de_Ponto
                     }
                     con.Close();
                     con.Open();
-                    
+                    string matriculaFunc = matriculaa;
+                    string dataDia = dataFormatada;
+
+
+                    login = "SELECT \r\n                        CASE\r\n                            WHEN DATEDIFF(MINUTE, e.horarioEntrada, f.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n                            WHEN DATEDIFF(MINUTE, e.horarioEntrada, f.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez hora extra'\r\n                                                   END AS StatusHora\r\n                    FROM Entrada e\r\n                    INNER JOIN Funcionario f ON e.matriculaFunc = f.matricula\r\n                    WHERE e.matriculaFunc = @matriculaFunc\r\n                        AND e.dataDia = @dataDia;";
+                    using (SqlCommand command = new SqlCommand(login, con))
+                    {
+                        string horaEntrada = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraEntrada;
+                        string horaSaida = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraSaida;
+                        command.Parameters.AddWithValue("@matriculaFunc", matriculaFunc);
+                        command.Parameters.AddWithValue("@dataDia", dataDia);
+                        command.Parameters.AddWithValue("@horaEntrada", TimeSpan.Parse(f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraEntrada));
+                        command.Parameters.AddWithValue("@horaSaida", TimeSpan.Parse(f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraSaida));
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                statusHora = reader["StatusHora"].ToString();
+
+                            }
+
+                        }
+                    }
+
                     // Formato desejado da data
                     Label label = new Label();
                     Label lblEntrada = new Label();
                     Label lblSaida = new Label();
+                    Label lbl23 = new Label();
+
+                    lbl23.Text = statusHora;
+                    lbl23.Top = top;
+                    lbl23.Left = 455;
+                    lbl23.AutoSize = true;
+                    lbl23.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
+                    panel1.Controls.Add(lbl23);
+                    statusHora = "";
 
                     label.Text = dataFormatada;
                     lblEntrada.Text = horarioEntrada;
@@ -216,6 +250,7 @@ namespace Registro_de_Ponto
 
                     top += label.Height + 16;
                     // Espaçamento entre as labels
+
                 }
             }
 
