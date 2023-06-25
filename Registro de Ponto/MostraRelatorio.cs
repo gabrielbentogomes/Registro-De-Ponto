@@ -129,6 +129,63 @@ namespace Registro_de_Ponto
 
                         }
                     }
+                    con.Close();
+                    con.Open();
+                    login = "SELECT DATEDIFF(MINUTE, e.primeiroPontoEntrada, s.ultimoPontoSaida) AS HorasDecorridas\r\nFROM\r\n(\r\n  SELECT MIN(horarioEntrada) AS primeiroPontoEntrada\r\n  FROM Entrada\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatada\r\n) AS e\r\nCROSS JOIN\r\n(\r\n  SELECT MAX(horarioSaida) AS ultimoPontoSaida\r\n  FROM Saida\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatadas\r\n) AS s;\r\n";
+                    using (SqlCommand cmd = new SqlCommand(login, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Matricula", matriculaa);
+                        cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
+                        cmd.Parameters.AddWithValue("@dataFormatadas", dataFormatada);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (!reader.IsDBNull(0))
+                                {
+                                    int minutosPassadosInt = reader.GetInt32(0);
+                                    int horasDecorridas = minutosPassadosInt / 60;
+                                    int minutosRestantes = minutosPassadosInt % 60;
+                                    string tempoDecorrido = horasDecorridas.ToString("00") + ":" + minutosRestantes.ToString("00");
+
+                                    Label lbl4 = new Label();
+                                    lbl4.Text = tempoDecorrido;
+                                    lbl4.Top = top;
+                                    lbl4.Left = 655;
+                                    lbl4.AutoSize = true;
+                                    lbl4.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
+                                    panel1.Controls.Add(lbl4);
+                                }
+                                else
+                                {
+                                    Label lbl3 = new Label();
+                                    lbl3.Text = "Falta";
+                                    lbl3.Top = top;
+                                    lbl3.Left = 500;
+                                    lbl3.AutoSize = true;
+                                    lbl3.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
+                                    panel1.Controls.Add(lbl3);
+
+                                }
+                            }
+
+                            else
+                            {
+                                Label lbl3 = new Label();
+                                lbl3.Text = "Falta";
+                                lbl3.Top = top;
+                                lbl3.Left = 335;
+                                lbl3.AutoSize = true;
+                                lbl3.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
+                                panel1.Controls.Add(lbl3);
+                            }
+
+                        }
+                    }
+                    con.Close();
+                    con.Open();
+                    
                     // Formato desejado da data
                     Label label = new Label();
                     Label lblEntrada = new Label();
@@ -160,58 +217,12 @@ namespace Registro_de_Ponto
                     top += label.Height + 16;
                     // Espaçamento entre as labels
                 }
-                /*FuncaoPegarUser f1 = new FuncaoPegarUser();
-
-                string matriculaa = f1.BuscarInformacoesUsuario(matriculas.Matriculas).Matricula;
-                mostrarBatidas(dataInicio, dataFinal, matriculaa);*/
-
             }
 
-            /*private void mostrarBatidas(DateTime dataInicio, DateTime dataFinal, string matriculaa)
-            {
-                for (DateTime data = dataInicio; data <= dataFinal; data = data.AddDays(1))
-                {
-                    string dataFormatada = data.ToString("dd/MM/yyyy"); // Formato desejado da data
-                    string horarioEntrada = null;
-                    string horarioSaida = null;
-                    using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
-                    {
-                        con.Open();
+        }
 
-                        string login = "SELECT f.matricula, f.nomeCompleto, COALESCE(e.horarioEntrada, NULL) AS horarioEntrada, COALESCE(s.horarioSaida, NULL) AS horarioSaida\r\nFROM Funcionario f\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioEntrada\r\n  FROM Entrada\r\n  WHERE dataDia = @dataFormatada\r\n) e ON f.matricula = e.matriculaFunc\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioSaida\r\n  FROM Saida\r\n  WHERE dataDia = @dataFormatada\r\n) s ON f.matricula = s.matriculaFunc\r\nWHERE f.matricula = @Matricula;";
-                        using (SqlCommand cmd = new SqlCommand(login, con))
-                        {
-                            cmd.Parameters.AddWithValue("@Matricula", matriculaa);
-                            cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
-
-                            using (SqlDataReader reader = cmd.ExecuteReader())
-                            {
-                                if (reader.Read())
-                                {
-                                    horarioEntrada = reader["horarioEntrada"].ToString();
-                                    horarioSaida = reader["horarioSaida"].ToString();
-
-                                }
-
-
-                            }
-                        }
-
-                        Label label = new Label();
-                        label.Text = horarioEntrada;
-                        Label label1 = new Label();
-                        label1.Text = horarioSaida;
-                        label.Left = 129;
-                        label.AutoSize = true;
-
-                        panel1.Controls.Add(label);
-                        panel1.Controls.Add(label1);
-
-
-                    }
-                }
-            }*/
-
+        private void calculaHora()
+        {
 
         }
     }
