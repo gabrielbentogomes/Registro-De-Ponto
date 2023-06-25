@@ -190,7 +190,7 @@ namespace Registro_de_Ponto
                     string dataDia = dataFormatada;
 
 
-                    login = "SELECT \r\n                        CASE\r\n                            WHEN DATEDIFF(MINUTE, e.horarioEntrada, f.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n                            WHEN DATEDIFF(MINUTE, e.horarioEntrada, f.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez hora extra'\r\n                                                   END AS StatusHora\r\n                    FROM Entrada e\r\n                    INNER JOIN Funcionario f ON e.matriculaFunc = f.matricula\r\n                    WHERE e.matriculaFunc = @matriculaFunc\r\n                        AND e.dataDia = @dataDia;";
+                    login = "SELECT e.horarioEntrada, s.horarioSaida,\r\n       DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) AS MinutosFicou,\r\n       CASE WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez Hora Extra' \r\n            WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n         END AS StatusHora\r\nFROM Entrada e\r\nINNER JOIN Saida s ON e.matriculaFunc = s.matriculaFunc\r\nWHERE e.matriculaFunc = @matriculaFunc AND e.dataDia = @dataDia";
                     using (SqlCommand command = new SqlCommand(login, con))
                     {
                         string horaEntrada = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraEntrada;
