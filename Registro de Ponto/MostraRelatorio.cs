@@ -144,12 +144,12 @@ namespace Registro_de_Ponto
                     label.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
                     lblEntrada.Top = top;
-                    lblEntrada.Left = 229;
+                    lblEntrada.Left = 235;
                     lblEntrada.AutoSize = true;
                     lblEntrada.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
                     lblSaida.Top = top;
-                    lblSaida.Left = 329;
+                    lblSaida.Left = 335;
                     lblSaida.AutoSize = true;
                     lblSaida.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
