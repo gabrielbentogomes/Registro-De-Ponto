@@ -39,6 +39,7 @@ namespace Registro_de_Ponto
 
         private void carregarDados(string matriculaa)
         {
+            string minutosPassados = null;
             string horarioEntrada = null;
             string horarioSaida = null;
             using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
@@ -62,7 +63,38 @@ namespace Registro_de_Ponto
 
                     }
                 }
-    
+                con.Close();
+                con.Open();
+                login = "SELECT DATEDIFF(MINUTE, e.primeiroPontoEntrada, s.ultimoPontoSaida) AS HorasDecorridas\r\nFROM\r\n(\r\n  SELECT MIN(horarioEntrada) AS primeiroPontoEntrada\r\n  FROM Entrada\r\n  WHERE matriculaFunc = @Matricula\r\n    AND CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) AS e\r\nCROSS JOIN\r\n(\r\n  SELECT MAX(horarioSaida) AS ultimoPontoSaida\r\n  FROM Saida\r\n  WHERE matriculaFunc = @Matricula\r\n    AND CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) AS s;";
+                using (SqlCommand cmd = new SqlCommand(login, con))
+                {
+                    cmd.Parameters.AddWithValue("@Matricula", matriculaa);
+                    
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (!reader.IsDBNull(0))
+                            {
+                                int minutosPassadosInt = reader.GetInt32(0);
+                                int horasDecorridas = minutosPassadosInt / 60;
+                                int minutosRestantes = minutosPassadosInt % 60;
+                                txtTempoDecorrido.Text = horasDecorridas.ToString("00") + ":" + minutosRestantes.ToString("00");
+                            }
+                            else
+                            {
+                                txtTempoDecorrido.Text = "";
+                            }
+                        }
+                        else
+                        {
+                            txtTempoDecorrido.Text = "00:00";
+                        }
+                    }
+                    
+                }
+
+                
                 txtEntrada.Text = horarioEntrada;
                 txtSaida.Text = horarioSaida;
                
