@@ -153,7 +153,7 @@ namespace Registro_de_Ponto
                                     Label lbl4 = new Label();
                                     lbl4.Text = tempoDecorrido;
                                     lbl4.Top = top;
-                                    lbl4.Left = 655;
+                                    lbl4.Left = 680;
                                     lbl4.AutoSize = true;
                                     lbl4.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
                                     panel1.Controls.Add(lbl4);
@@ -219,7 +219,7 @@ namespace Registro_de_Ponto
 
                     lbl23.Text = statusHora;
                     lbl23.Top = top;
-                    lbl23.Left = 455;
+                    lbl23.Left = 445;
                     lbl23.AutoSize = true;
                     lbl23.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
                     panel1.Controls.Add(lbl23);
@@ -229,18 +229,18 @@ namespace Registro_de_Ponto
                     lblEntrada.Text = horarioEntrada;
                     lblSaida.Text = horarioSaida;
 
-                    label.Top = top;
-                    label.Left = 129;
+                    label.Top = top; // label das datas
+                    label.Left = 142;
                     label.AutoSize = true;
                     label.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
                     lblEntrada.Top = top;
-                    lblEntrada.Left = 235;
+                    lblEntrada.Left = 260;
                     lblEntrada.AutoSize = true;
                     lblEntrada.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
                     lblSaida.Top = top;
-                    lblSaida.Left = 335;
+                    lblSaida.Left = 363;
                     lblSaida.AutoSize = true;
                     lblSaida.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
 
@@ -260,5 +260,6 @@ namespace Registro_de_Ponto
         {
 
         }
+
     }
 }

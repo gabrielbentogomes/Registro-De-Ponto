@@ -367,7 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(832, 554);
+            this.ClientSize = new System.Drawing.Size(816, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MostraRelatorio";
