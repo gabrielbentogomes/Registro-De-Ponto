@@ -46,9 +46,13 @@ namespace Registro_de_Ponto
             {
                 con.Open();
 
-                string login = "SELECT f.matricula, f.nomeCompleto, COALESCE(e.horarioEntrada, NULL) AS horarioEntrada, COALESCE(s.horarioSaida, NULL) AS horarioSaida\r\nFROM Funcionario f\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioEntrada\r\n  FROM Entrada\r\n  WHERE CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) e ON f.matricula = e.matriculaFunc\r\nLEFT JOIN (\r\n  SELECT matriculaFunc, horarioSaida\r\n  FROM Saida\r\n  WHERE CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) s ON f.matricula = s.matriculaFunc\r\nWHERE f.matricula = @Matricula;\r\n";
+                string login = "SELECT f.matricula, f.nomeCompleto, COALESCE(e.horarioEntrada, NULL) AS horarioEntrada, COALESCE(s.horarioSaida, NULL) AS horarioSaida\r\nFROM Funcionario f\r\nLEFT JOIN (\r\n    SELECT matriculaFunc, horarioEntrada\r\n    FROM Entrada\r\n    WHERE dataDia = @dataFormatada\r\n) e ON f.matricula = e.matriculaFunc\r\nLEFT JOIN (\r\n    SELECT matriculaFunc, horarioSaida\r\n    FROM Saida\r\n    WHERE dataDia = @dataFormatada\r\n) s ON f.matricula = s.matriculaFunc\r\nWHERE f.matricula = @Matricula;";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
+                    DateTime data = DateTime.Now;
+                    string dataFormatada = data.ToString("dd/MM/yyyy");
+                    MessageBox.Show(dataFormatada);
+                    cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -65,11 +69,15 @@ namespace Registro_de_Ponto
                 }
                 con.Close();
                 con.Open();
-                login = "SELECT DATEDIFF(MINUTE, e.primeiroPontoEntrada, s.ultimoPontoSaida) AS HorasDecorridas\r\nFROM\r\n(\r\n  SELECT MIN(horarioEntrada) AS primeiroPontoEntrada\r\n  FROM Entrada\r\n  WHERE matriculaFunc = @Matricula\r\n    AND CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) AS e\r\nCROSS JOIN\r\n(\r\n  SELECT MAX(horarioSaida) AS ultimoPontoSaida\r\n  FROM Saida\r\n  WHERE matriculaFunc = @Matricula\r\n    AND CONVERT(DATE, dataDia, 103) = CONVERT(DATE, GETDATE())\r\n) AS s;";
+                login = "SELECT DATEDIFF(MINUTE, e.primeiroPontoEntrada, s.ultimoPontoSaida) AS HorasDecorridas\r\nFROM\r\n(\r\n  SELECT MIN(horarioEntrada) AS primeiroPontoEntrada\r\n  FROM Entrada\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatada\r\n) AS e\r\nCROSS JOIN\r\n(\r\n  SELECT MAX(horarioSaida) AS ultimoPontoSaida\r\n  FROM Saida\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatadas\r\n) AS s;\r\n";
                 using (SqlCommand cmd = new SqlCommand(login, con))
                 {
+                    DateTime data = DateTime.Now;
+                    string dataFormatada = data.ToString("dd/MM/yyyy");
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);
-                    
+                    cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
+                    cmd.Parameters.AddWithValue("@dataFormatadas", dataFormatada);
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
