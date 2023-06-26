@@ -18,6 +18,25 @@ namespace Registro_de_Ponto
         {
             InitializeComponent();
             localizarFunc.Enabled = false;
+
+        }
+        private void txtMatricula_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtData_TextChanged(object sender, EventArgs e)
+        {
+            VerificarCampos();
+        }
+
+        private void VerificarCampos()
+        {
+            // Verificar se os campos de matrícula e data não são nulos ou vazios
+            bool camposPreenchidos = !string.IsNullOrEmpty(nomeUsuario.Text) && !string.IsNullOrEmpty(data.Text);
+
+            // Ativar ou desativar o botão com base nos campos preenchidos
+            localizarFunc.Enabled = camposPreenchidos;
         }
 
         private void btnSelecionarPeriodo_Click(object sender, EventArgs e)
@@ -32,7 +51,6 @@ namespace Registro_de_Ponto
 
             diaSemanaH.Text = nomeDiaSemana;
 
-            localizarFunc.Enabled = true;
 
 
         }
@@ -219,6 +237,16 @@ namespace Registro_de_Ponto
                     }
                 }
             }
+        }
+
+        private void nomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+            VerificarCampos();
+        }
+
+        private void data_TextChanged(object sender, EventArgs e)
+        {
+            VerificarCampos();
         }
     }
 }

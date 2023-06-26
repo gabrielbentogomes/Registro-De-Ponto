@@ -64,6 +64,7 @@
             this.nomeUsuario.Name = "nomeUsuario";
             this.nomeUsuario.Size = new System.Drawing.Size(136, 20);
             this.nomeUsuario.TabIndex = 26;
+            this.nomeUsuario.TextChanged += new System.EventHandler(this.nomeUsuario_TextChanged);
             // 
             // label2
             // 
@@ -286,6 +287,7 @@
             this.data.ReadOnly = true;
             this.data.Size = new System.Drawing.Size(100, 20);
             this.data.TabIndex = 31;
+            this.data.TextChanged += new System.EventHandler(this.data_TextChanged);
             // 
             // TratarPonto
             // 
