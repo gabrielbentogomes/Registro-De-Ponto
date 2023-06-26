@@ -55,5 +55,10 @@ namespace Registro_de_Ponto
             this.horaEntrada = horaEntrada;
             this.horaSaida = horaSaida;
         }
+
+        public Pessoa()
+        {
+
+        }
     }
 }

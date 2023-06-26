@@ -43,6 +43,7 @@ namespace Registro_de_Ponto
             string dataFormatada = dataH.Text;
             string horarioEntrada = null;
             string horarioSaida = null;
+            string statusHora = null;
 
             using (SqlConnection con = new SqlConnection("Data Source=gabriel261020.database.windows.net;Initial Catalog=Registro_Ponto;User ID=gabrielbento;Password=BDlg@#$!"))
             {
@@ -103,6 +104,38 @@ namespace Registro_de_Ponto
                     }
 
                 }
+                con.Close ();
+                con.Open();
+                con.Close();
+                con.Open();
+                string matriculaFunc = matricula;
+                string dataDia = dataFormatada;
+
+                query = "SELECT\r\n    e.horarioEntrada,\r\n    s.horarioSaida,\r\n    DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) AS MinutosFicou,\r\n    CASE\r\n        WHEN e.horarioEntrada IS NULL AND s.horarioSaida IS NULL THEN 'Faltou'\r\n        WHEN e.horarioEntrada IS NOT NULL AND s.horarioSaida IS NULL THEN 'Carga Horária Incompleta (Falta Saída)'\r\n        WHEN e.horarioEntrada IS NULL AND s.horarioSaida IS NOT NULL THEN 'Carga Horária Incompleta (Falta Entrada)'\r\n        WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez Hora Extra'\r\n        WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n    END AS StatusHora\r\nFROM\r\n    (SELECT TOP 1 * FROM Entrada WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia ORDER BY horarioEntrada ASC) e\r\nFULL OUTER JOIN\r\n    (SELECT TOP 1 * FROM Saida WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia ORDER BY horarioSaida DESC) s\r\nON\r\n    e.matriculaFunc = s.matriculaFunc\r\nWHERE\r\n    e.horarioEntrada IS NOT NULL OR s.horarioSaida IS NOT NULL\r\nUNION ALL\r\nSELECT\r\n    NULL AS horarioEntrada,\r\n    NULL AS horarioSaida,\r\n    NULL AS MinutosFicou,\r\n    'Faltou' AS StatusHora\r\nWHERE\r\n    NOT EXISTS (SELECT 1 FROM Entrada WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia)\r\n    AND NOT EXISTS (SELECT 1 FROM Saida WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia);\r\n";
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    Pessoa p2 = new Pessoa();
+                    p2.Matricula = matricula;
+                    FuncaoPegarUser f1 = new FuncaoPegarUser();
+                    f1.BuscarInformacoesUsuario(p2.Matricula);
+                    string horaEntrada = f1.BuscarInformacoesUsuario(p2.Matricula).HoraEntrada;
+                    string horaSaida = f1.BuscarInformacoesUsuario(p2.Matricula).HoraSaida;
+                    command.Parameters.AddWithValue("@matriculaFunc", matriculaFunc);
+                    command.Parameters.AddWithValue("@dataDia", dataDia);
+                    command.Parameters.AddWithValue("@horaEntrada", TimeSpan.Parse(f1.BuscarInformacoesUsuario(p2.Matricula).HoraEntrada));
+                    command.Parameters.AddWithValue("@horaSaida", TimeSpan.Parse(f1.BuscarInformacoesUsuario(p2.Matricula).HoraSaida));
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            statusHora = reader["StatusHora"].ToString();
+
+                        }
+
+                    }
+                }
+                textBox233.Text = statusHora;
             }
 
 
