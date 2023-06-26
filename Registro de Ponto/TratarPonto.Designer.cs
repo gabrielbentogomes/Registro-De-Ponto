@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TratarPonto));
             this.nomeUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,8 +48,6 @@
             this.alterarH = new System.Windows.Forms.Button();
             this.btnSelecionarPeriodo = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
@@ -84,7 +83,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(17, 391);
+            this.panel3.Location = new System.Drawing.Point(17, 316);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(491, 21);
             this.panel3.TabIndex = 24;
@@ -140,7 +139,7 @@
             this.panel1.Controls.Add(this.textBox239);
             this.panel1.Controls.Add(this.textBox240);
             this.panel1.Controls.Add(this.panel26);
-            this.panel1.Location = new System.Drawing.Point(17, 410);
+            this.panel1.Location = new System.Drawing.Point(17, 335);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(491, 59);
             this.panel1.TabIndex = 23;
@@ -157,10 +156,10 @@
             // textBox233
             // 
             this.textBox233.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox233.Location = new System.Drawing.Point(262, 28);
+            this.textBox233.Location = new System.Drawing.Point(234, 28);
             this.textBox233.Name = "textBox233";
             this.textBox233.ReadOnly = true;
-            this.textBox233.Size = new System.Drawing.Size(120, 20);
+            this.textBox233.Size = new System.Drawing.Size(171, 20);
             this.textBox233.TabIndex = 253;
             // 
             // textBox239
@@ -227,7 +226,7 @@
             this.alterarH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(36)))));
             this.alterarH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.alterarH.ForeColor = System.Drawing.Color.White;
-            this.alterarH.Location = new System.Drawing.Point(211, 510);
+            this.alterarH.Location = new System.Drawing.Point(211, 435);
             this.alterarH.Name = "alterarH";
             this.alterarH.Size = new System.Drawing.Size(130, 38);
             this.alterarH.TabIndex = 28;
@@ -253,23 +252,6 @@
             this.monthCalendar1.ShowToday = false;
             this.monthCalendar1.TabIndex = 32;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(181, 335);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
-            this.comboBox1.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 338);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Selecione o motivo: ";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -293,9 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 567);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(528, 492);
             this.Controls.Add(this.btnSelecionarPeriodo);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.data);
@@ -306,9 +286,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TratarPonto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HistoricoSuper";
+            this.Text = "Tratar Ponto";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -341,8 +322,6 @@
         private System.Windows.Forms.Button alterarH;
         private System.Windows.Forms.Button btnSelecionarPeriodo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox data;
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdmin));
             this.alteraSenha = new System.Windows.Forms.Button();
             this.nomeUsuarioAdmin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.nomeUsuarioAdmin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PerfilAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilAdmin";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarBancoAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -245,6 +246,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(829, 450);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MostrarBancoAdmin";
             this.Text = "Banco de horas";
             this.panel1.ResumeLayout(false);

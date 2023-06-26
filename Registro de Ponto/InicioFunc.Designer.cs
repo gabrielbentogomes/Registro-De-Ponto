@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio_Func));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPerfil = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,6 +162,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio_Func";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Início";

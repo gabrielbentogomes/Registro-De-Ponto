@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SenhaAdmin));
             this.mostraSenha = new System.Windows.Forms.CheckBox();
             this.cancelarSenha = new System.Windows.Forms.Button();
             this.confirmaSenha = new System.Windows.Forms.Button();
@@ -122,9 +123,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.novaSenha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SenhaAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SenhaAdmin";
+            this.Text = "Alterar Senha";
             this.ResumeLayout(false);
             this.PerformLayout();
 

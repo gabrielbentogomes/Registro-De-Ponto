@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPerfil = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Perfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil";
