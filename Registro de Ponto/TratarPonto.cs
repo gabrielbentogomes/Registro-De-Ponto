@@ -68,10 +68,44 @@ namespace Registro_de_Ponto
                         }
                     }
                 }
+                textBox240.Text = horarioEntrada;
+                textBox239.Text = horarioSaida;
+                con.Close();
+                con.Open();
+                query = "SELECT DATEDIFF(MINUTE, e.primeiroPontoEntrada, s.ultimoPontoSaida) AS HorasDecorridas\r\nFROM\r\n(\r\n  SELECT MIN(horarioEntrada) AS primeiroPontoEntrada\r\n  FROM Entrada\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatada\r\n) AS e\r\nCROSS JOIN\r\n(\r\n  SELECT MAX(horarioSaida) AS ultimoPontoSaida\r\n  FROM Saida\r\n  WHERE matriculaFunc = @Matricula\r\n    AND dataDia = @dataFormatadas\r\n) AS s;\r\n";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    DateTime data = DateTime.Now;
+                    cmd.Parameters.AddWithValue("@Matricula", matricula);
+                    cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
+                    cmd.Parameters.AddWithValue("@dataFormatadas", dataFormatada);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (!reader.IsDBNull(0))
+                            {
+                                int minutosPassadosInt = reader.GetInt32(0);
+                                int horasDecorridas = minutosPassadosInt / 60;
+                                int minutosRestantes = minutosPassadosInt % 60;
+                                textBox224.Text = horasDecorridas.ToString("00") + ":" + minutosRestantes.ToString("00");
+                            }
+                            else
+                            {
+                                textBox224.Text = "";
+                            }
+                        }
+                        else
+                        {
+                            textBox224.Text = "00:00";
+                        }
+                    }
+
+                }
             }
 
-            textBox240.Text = horarioEntrada;
-            textBox239.Text = horarioSaida;
+
         }
 
         private void alterarH_Click(object sender, EventArgs e)
