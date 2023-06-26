@@ -158,7 +158,7 @@ namespace Registro_de_Ponto
                                     lbl4.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
                                     panel1.Controls.Add(lbl4);
                                 }
-                                else
+                                /*else
                                 {
                                     Label lbl3 = new Label();
                                     lbl3.Text = "Falta";
@@ -168,7 +168,7 @@ namespace Registro_de_Ponto
                                     lbl3.Font = new Font(familiaFonte, tamanhoFonte, estiloFonte);
                                     panel1.Controls.Add(lbl3);
 
-                                }
+                                }*/
                             }
 
                             else
@@ -189,8 +189,7 @@ namespace Registro_de_Ponto
                     string matriculaFunc = matriculaa;
                     string dataDia = dataFormatada;
 
-
-                    login = "SELECT e.horarioEntrada, s.horarioSaida,\r\n       DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) AS MinutosFicou,\r\n       CASE WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez Hora Extra' \r\n            WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n         END AS StatusHora\r\nFROM Entrada e\r\nINNER JOIN Saida s ON e.matriculaFunc = s.matriculaFunc\r\nWHERE e.matriculaFunc = @matriculaFunc AND e.dataDia = @dataDia";
+                    login = "SELECT\r\n    e.horarioEntrada,\r\n    s.horarioSaida,\r\n    DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) AS MinutosFicou,\r\n    CASE\r\n        WHEN e.horarioEntrada IS NULL AND s.horarioSaida IS NULL THEN 'Faltou'\r\n        WHEN e.horarioEntrada IS NOT NULL AND s.horarioSaida IS NULL THEN 'Carga Horária Incompleta (Falta Saída)'\r\n        WHEN e.horarioEntrada IS NULL AND s.horarioSaida IS NOT NULL THEN 'Carga Horária Incompleta (Falta Entrada)'\r\n        WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) > DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Fez Hora Extra'\r\n        WHEN DATEDIFF(MINUTE, e.horarioEntrada, s.horarioSaida) < DATEDIFF(MINUTE, @horaEntrada, @horaSaida) THEN 'Carga Horária Incompleta'\r\n    END AS StatusHora\r\nFROM\r\n    (SELECT TOP 1 * FROM Entrada WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia ORDER BY horarioEntrada ASC) e\r\nFULL OUTER JOIN\r\n    (SELECT TOP 1 * FROM Saida WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia ORDER BY horarioSaida DESC) s\r\nON\r\n    e.matriculaFunc = s.matriculaFunc\r\nWHERE\r\n    e.horarioEntrada IS NOT NULL OR s.horarioSaida IS NOT NULL\r\nUNION ALL\r\nSELECT\r\n    NULL AS horarioEntrada,\r\n    NULL AS horarioSaida,\r\n    NULL AS MinutosFicou,\r\n    'Faltou' AS StatusHora\r\nWHERE\r\n    NOT EXISTS (SELECT 1 FROM Entrada WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia)\r\n    AND NOT EXISTS (SELECT 1 FROM Saida WHERE matriculaFunc = @matriculaFunc AND dataDia = @dataDia);\r\n";
                     using (SqlCommand command = new SqlCommand(login, con))
                     {
                         string horaEntrada = f1.BuscarInformacoesUsuario(matriculas.Matriculas).HoraEntrada;
