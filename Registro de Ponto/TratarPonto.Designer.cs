@@ -213,12 +213,13 @@
             // localizarFunc
             // 
             this.localizarFunc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.localizarFunc.Location = new System.Drawing.Point(347, 16);
+            this.localizarFunc.Location = new System.Drawing.Point(347, 18);
             this.localizarFunc.Name = "localizarFunc";
             this.localizarFunc.Size = new System.Drawing.Size(75, 23);
             this.localizarFunc.TabIndex = 27;
             this.localizarFunc.Text = "Localizar";
             this.localizarFunc.UseVisualStyleBackColor = true;
+            this.localizarFunc.Click += new System.EventHandler(this.localizarFunc_Click);
             // 
             // alterarH
             // 
@@ -231,6 +232,7 @@
             this.alterarH.TabIndex = 28;
             this.alterarH.Text = "Alterar";
             this.alterarH.UseVisualStyleBackColor = false;
+            this.alterarH.Click += new System.EventHandler(this.alterarH_Click);
             // 
             // btnSelecionarPeriodo
             // 
