@@ -248,6 +248,7 @@ namespace Registro_de_Ponto
         {
             VerificarCampos();
         }
+
     }
 }
 

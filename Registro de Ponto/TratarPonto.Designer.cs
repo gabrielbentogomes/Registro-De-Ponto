@@ -58,7 +58,7 @@
             // nomeUsuario
             // 
             this.nomeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.nomeUsuario.Location = new System.Drawing.Point(205, 18);
+            this.nomeUsuario.Location = new System.Drawing.Point(205, 270);
             this.nomeUsuario.Multiline = true;
             this.nomeUsuario.Name = "nomeUsuario";
             this.nomeUsuario.Size = new System.Drawing.Size(136, 20);
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 21);
+            this.label2.Location = new System.Drawing.Point(103, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 25;
@@ -213,7 +213,7 @@
             // localizarFunc
             // 
             this.localizarFunc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.localizarFunc.Location = new System.Drawing.Point(347, 18);
+            this.localizarFunc.Location = new System.Drawing.Point(347, 270);
             this.localizarFunc.Name = "localizarFunc";
             this.localizarFunc.Size = new System.Drawing.Size(75, 23);
             this.localizarFunc.TabIndex = 27;
@@ -236,7 +236,7 @@
             // 
             // btnSelecionarPeriodo
             // 
-            this.btnSelecionarPeriodo.Location = new System.Drawing.Point(191, 269);
+            this.btnSelecionarPeriodo.Location = new System.Drawing.Point(194, 224);
             this.btnSelecionarPeriodo.Name = "btnSelecionarPeriodo";
             this.btnSelecionarPeriodo.Size = new System.Drawing.Size(126, 23);
             this.btnSelecionarPeriodo.TabIndex = 33;
@@ -246,7 +246,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(251, 84);
+            this.monthCalendar1.Location = new System.Drawing.Point(144, 50);
             this.monthCalendar1.MaxSelectionCount = 31;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.ShowToday = false;
@@ -255,7 +255,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 157);
+            this.label5.Location = new System.Drawing.Point(178, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 29;
@@ -264,7 +264,7 @@
             // data
             // 
             this.data.Cursor = System.Windows.Forms.Cursors.Default;
-            this.data.Location = new System.Drawing.Point(106, 154);
+            this.data.Location = new System.Drawing.Point(220, 12);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.Size = new System.Drawing.Size(100, 20);

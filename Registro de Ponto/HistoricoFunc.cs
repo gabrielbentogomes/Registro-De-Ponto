@@ -51,7 +51,6 @@ namespace Registro_de_Ponto
                 {
                     DateTime data = DateTime.Now;
                     string dataFormatada = data.ToString("dd/MM/yyyy");
-                    MessageBox.Show(dataFormatada);
                     cmd.Parameters.AddWithValue("@dataFormatada", dataFormatada);
                     cmd.Parameters.AddWithValue("@Matricula", matriculaa);
 
