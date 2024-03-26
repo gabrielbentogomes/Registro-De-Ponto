@@ -1,3 +1,4 @@
+Desenvolvido por: Gabriel Bento Gomes e Lilian Santos
 # Registro-de-Ponto
 
 1. Página de login
